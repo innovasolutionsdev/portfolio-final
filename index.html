@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Navbar Example
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
+    <style>
+        .icon-hover:hover {
+            color: #6B46C1;
+            /* Tailwind's purple-600 */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Full viewport height */
+        }
+
+        .w-full {
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        function toggleCards() {
+            const hiddenCards = document.querySelectorAll('.hidden-card');
+            hiddenCards.forEach(card => {
+                card.classList.toggle('hidden');
+            });
+
+
+            // Change button text
+            const toggleButton = document.getElementById('toggleButton');
+            if (toggleButton.innerText === "View more") {
+                toggleButton.innerText = "Hide";
+            } else {
+                toggleButton.innerText = "View more";
+            }
+        }
+    </script>
+</head>
+
+<!-- <body class="bg-gray-50"> -->
+
+<body class="bg-gray-100">
+    <nav class="flex items-center justify-between p-4">
+        <div class="flex items-center">
+            <img alt="Company logo" class="h-10 w-10" height="50"
+                src="https://storage.googleapis.com/a1aa/image/JDaeePfYopO19Ibb8uBdg3UAxgW9g95BOlZ4DHR67Bf7MKkPB.jpg"
+                width="50" />
+            <span class="ml-2 text-xl font-bold text-gray-900">
+                THENA
+            </span>
+        </div>
+        <div class="flex items-center space-x-6">
+            <div class="relative group">
+                <button class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out">
+                    Products
+                    <i class="fas fa-chevron-down ml-1 text-sm">
+                    </i>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                    class="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md transition duration-300 ease-in-out">
+                    <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">
+                        Product 1
+                    </a>
+                    <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">
+                        Product 2
+                    </a>
+                </div>
+            </div>
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out" href="#">
+                Pricing
+            </a>
+
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out" href="#">
+                Our Domains
+            </a>
+
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out" href="#">
+                FAQ
+            </a>
+
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out"
+                href="product_details.html">
+                Details
+            </a>
+
+        </div>
+        <div class="flex items-center space-x-4">
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out" href="#">
+                Login
+            </a>
+            <a class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out"
+                href="#">
+                Request a demo
+            </a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+
+    <!-- Wrap the hero section in a container -->
+    <div class="hero-container flex items-center justify-center mt-16 pt-16 mb-12">
+        <div class="text-center ">
+            <h1 class="font-black text-gray-900 leading-tight"
+                style="font-family: 'Inter', 'Inter Placeholder', sans-serif; font-size: 5rem; font-weight: 1000;">
+                Platforms To Make <br>Your Life Easy</h1>
+            <p class="text-gray-500 text-xl mt-6 ">Simplify your operations, enhance your online presence,<br> and fuel
+                your business growth effortlessly.</p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <button
+                    class="bg-gray-800 text-white py-2 px-6 rounded-full text-lg font-semibold hover:bg-purple-700 transition duration-300">
+                    Request a demo <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <button
+                    class="bg-gray-200 text-gray-900 py-2 px-6 rounded-full text-lg font-semibold hover:bg-gray-300 transition duration-300">
+                    View Pricing <i class="fas fa-tag ml-2"></i>
+                </button>
+            </div>
+            <div class="mt-8 flex items-center justify-center ">
+                <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px"
+                    height="30px" class="mr-2">
+                    <path
+                        d="M 15.003906 3 C 8.3749062 3 3 8.373 3 15 C 3 21.627 8.3749062 27 15.003906 27 C 25.013906 27 27.269078 17.707 26.330078 13 L 25 13 L 22.732422 13 L 15 13 L 15 17 L 22.738281 17 C 21.848702 20.448251 18.725955 23 15 23 C 10.582 23 7 19.418 7 15 C 7 10.582 10.582 7 15 7 C 17.009 7 18.839141 7.74575 20.244141 8.96875 L 23.085938 6.1289062 C 20.951937 4.1849063 18.116906 3 15.003906 3 z" />
+                </svg>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <span class="ml-2 text-gray-900">4.9/5</span>
+            </div>
+        </div>
+    </div>
+    <!-- oUR SERVICES -->
+    <style>
+        /* Styling for the text */
+        .text-heading {
+            font-family: 'Inter', 'Inter Placeholder', sans-serif;
+            /* Use the specified font family */
+            font-size: 42px;
+            /* Set the font size */
+            color: #1d1d1d;
+            /* Set the font color */
+            font-weight: 900;
+            /* Adjust font weight if needed (400 is normal) */
+        }
+
+        /* Heading Style */
+        .card-heading {
+            font-weight: 700;
+            /* Bold text */
+            font-size: 1.25rem;
+            /* Approximately 20px */
+            color: #1A1A1A;
+            /* Dark navy or deep gray */
+            margin: 0 0 8px 0;
+            /* Add spacing below */
+        }
+
+        /* Paragraph Style */
+        .card-description {
+            font-weight: 200;
+            /* Regular text */
+            font-size: 1rem;
+            /* Approximately 16px */
+            color: #6B6B6B;
+            /* Light gray text */
+            line-height: 1.5;
+            /* Comfortable line spacing */
+            margin: 0;
+            /* No extra margins */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .card {
+            transition: filter 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            /* filter: brightness(1.1); */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <div class="text-center py-12">
+        <h1 class="text-heading ">
+            Solutions For Every Aspect
+        </h1>
+        <p class="text-xl text-gray-500 mt-4">
+            Streamline operations, enhance productivity,
+            and
+            accelerate growth.
+        </p>
+    </div>
+    <div class="max-w-7xl mx-auto  p-4 sm:p-6 lg:p-8 ">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="bg-white p-12 rounded-3xl text-center card ">
+                <img alt="Customer Relationship Management (CRM) example" class="mx-auto mb-4 rounded-lg" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/PKAd4IvcTexUcSMsAXSdYJXVaOzRrMK4ViDNtA6o9meUeGynA.jpg"
+                    width="300" />
+
+                <h2 class="card-heading">
+                    CRM
+                </h2>
+                <p class="card-description">
+                    Elevate customer engagement with intuitive tools for tracking leads and fostering relationships.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl text-center card ">
+                <div class="p-10">
+                    <img alt="Enterprise Resource Planning (ERP) example" class="mx-auto rounded-xl  mb-4 " height="200"
+                        src="https://storage.googleapis.com/a1aa/image/itAxhXeWfSrlPEWTIxKGlNyeHfBfq3GHwTamCc5rTlDPybIfE.jpg"
+                        width="300" />
+                </div>
+
+                <h2 class="card-heading mb-2">
+                    ERP
+                </h2>
+                <p class="card-description">
+                    Seamlessly integrate business processes like inventory, finance, and HR for efficient operations.
+                </p>
+            </div>
+            <div class="bg-white p-12 rounded-3xl text-center card ">
+                <img alt="Content Management System (CMS) example" class="mx-auto mb-4 rounded-xl" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/w1reIiZa1CWNe0SJnLzYluO0nHv2yf4jotbmHN5uZIDm8GynA.jpg"
+                    width="300" />
+                <h2 class="card-heading mb-2">
+                    CMS
+                </h2>
+                <p class="card-description">
+                    Easily manage website content to keep your digital presence fresh and scalable.
+                </p>
+            </div>
+            <div class="bg-white p-12 rounded-3xl text-center card ">
+                <img alt="E-Commerce Platforms example" class="mx-auto mb-4 rounded-xl" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/cdzyAWNznuaAD5dlPDevSH0FuVHjMx3acxPCjTvEPteQeGynA.jpg"
+                    width="300" />
+                <h2 class="card-heading mb-2">
+                    E-Commerce
+                </h2>
+                <p class="card-description">
+                    Build a thriving online store with smooth checkout and inventory management.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 hidden" id="additionalServices">
+            <div class="bg-white p-6 rounded-3xl text-center card border border-gray-50 shadow-lg">
+                <img alt="Custom Business Applications example" class="mx-auto mb-4 rounded-xl" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/jZRscAVDq570IxUHfqxe0kLXatn2S829ZsZdxxe2q4Fu8GynA.jpg"
+                    width="300" />
+                <h2 class="card-heading mb-2">
+                    Custom Business Applications
+                </h2>
+                <p class="card-description">
+                    Simplify workflows and improve decision-making with tailored solutions.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl text-center card border border-gray-50 shadow-lg">
+                <img alt="Learning Management Systems (LMS) example" class="mx-auto mb-4 rounded-xl" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/qimuG25w6C5kMJnyoF1R2suDUyZjctuJCuNWf78MGNcMvh8JA.jpg"
+                    width="300" />
+                <h2 class="card-heading mb-2">
+                    LMS
+                </h2>
+                <p class="card-description">
+                    Manage and deliver educational content seamlessly for schools, training, or online courses.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl text-center card border border-gray-50 shadow-lg">
+                <img alt="Booking and Reservation Systems example" class="mx-auto mb-4 rounded-xl" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/xOORnuKDfxx9E6xEibV3yQhRVBBY6HNgKcZonINR03MLvh8JA.jpg"
+                    width="300" />
+                <h2 class="card-heading mb-2">
+                    Booking and Reservation Systems
+                </h2>
+                <p class="card-description">
+                    Streamline booking processes for travel, hospitality, or appointments.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl text-center card border border-gray-50 shadow-lg">
+                <img alt="Inventory Management Systems example" class="mx-auto mb-4 rounded-xl" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/ehX7pfGsKMoGNkhROrtbBp99kqfWcP5WZDkllahvOexW5NkPB.jpg"
+                    width="300" />
+                <h2 class="card-heading mb-2">
+                    Inventory Management Systems
+                </h2>
+                <p class="card-description">
+                    Efficiently track and manage stock to minimize costs and maximize efficiency.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-8 mb-4">
+        <button class="bg-gray-800 text-white px-6  py-2 rounded-xl" id="viewAllServices">
+            View All Services
+        </button>
+    </div>
+    </div>
+    <script>
+        document.getElementById('viewAllServices').addEventListener('click', function () {
+            const additionalServices = document.getElementById('additionalServices');
+            additionalServices.classList.toggle('hidden');
+            if (additionalServices.classList.contains('hidden')) {
+                this.textContent = 'View All Services';
+            } else {
+                this.textContent = 'Hide';
+            }
+        });
+    </script>
+    <!-- oUR SERVICES -->
+
+    <!-- Pricing -->
+
+    <section class="py-24 ">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h2 class="font-manrope text-5xl text-center font-bold text-gray-900 mb-3">Choose your plan </h2>
+                <p class="text-gray-500 text-center leading-6">7 Days free trial. No credit card required.</p>
+
+            </div>
+            <!--Grid-->
+            <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
+                <!--Pricing Card-->
+                <div
+                    class="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-100 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
+                    <h3 class="font-manrope text-2xl font-bold mb-3">Basic</h3>
+                    <div class="flex items-center mb-6">
+                        <span class="font-manrope mr-2 text-5xl font-semibold">12,000</span>
+                        <span class="text-xl text-gray-500 ">/ month</span>
+                    </div>
+                    <!--List-->
+                    <ul class="mb-8 space-y-2 text-left text-lg text-gray-500">
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-black font-bold" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Customized Design</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-black font-bold" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>E-Commerce</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-black font-bold" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Smart Notification</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-black font-bold" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Hosting and Domain</span>
+                        </li>
+                    </ul>
+                    <a href="javascript:;"
+                        class="py-2.5 px-5 bg-gray-800 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Purchase
+                        Plan</a>
+                    <!--List End-->
+                </div>
+                <!--Pricing Card-->
+                <div
+                    class="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-100 transition-all duration-500 hover:bg-indigo-100 ">
+                    <div
+                        class="uppercase bg-gradient-to-r from-gray-800 to-gray-900 rounded-t-2xl p-3 text-center text-white">
+                        MOST POPULAR
+                    </div>
+                    <div class="p-6 xl:py-8 xl:px-12">
+                        <h3 class="font-manrope text-2xl font-bold mb-3">Standard</h3>
+                        <div class="flex items-center mb-6">
+                            <span class="font-manrope mr-2 text-6xl font-semibold text-gray-800">15,500</span>
+                            <span class="text-xl text-gray-500 ">/ month</span>
+                        </div>
+                        <!--List-->
+                        <ul class="mb-8 space-y-2 text-left text-lg ">
+                            <li class="flex items-center space-x-4">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-6 h-6 text-yellow-400" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Customized Design</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-6 h-6 text-yellow-400" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Hosting and Domain</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-6 h-6 text-yellow-400" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>E-Commerce</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-6 h-6 text-yellow-400" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Smart Notification</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-6 h-6 text-yellow-400" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Mobile Application</span>
+                            </li>
+
+                            <li class="flex items-center space-x-4">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-6 h-6 text-yellow-400" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Content Management</span>
+                            </li>
+                        </ul>
+                        <a href="javascript:;"
+                            class="py-2.5 px-5 bg-gray-800 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit block mx-auto hover:bg-indigo-700">Purchase
+                            Plan</a>
+                        <!--List End-->
+                    </div>
+                </div>
+                <!--Pricing Card-->
+                <div
+                    class="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-100 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
+                    <h3 class="font-manrope text-2xl font-bold mb-3">Premium</h3>
+                    <div class="flex items-center mb-6">
+                        <span class="font-manrope mr-2 text-4xl font-semibold">150,000</span>
+                        <span class="text-xl text-gray-500 ">/ month</span>
+                    </div>
+                    <!--List-->
+                    <ul class="mb-8 space-y-2 text-left text-lg text-gray-500">
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Customized</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Hosting and Domain</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>E-Commerce</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Smart Notification</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Mobile Application</span>
+                        </li>
+
+                        <li class="flex items-center space-x-4">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-6 h-6 text-indigo-600" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Content Management</span>
+                        </li>
+                    </ul>
+                    <a href="javascript:;"
+                        class="py-2.5 px-5 bg-gray-800 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Purchase
+                        Plan</a>
+                    <!--List End-->
+                </div>
+            </div>
+            <!--Grid End-->
+
+        </div>
+    </section>
+
+
+    <!-- Domains -->
+    <div class="mx-20">
+        <div class="text-center py-12">
+            <h1 class="text-4xl font-semibold">
+                Our Domains
+            </h1>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8 px-4">
+            <!-- Sales Card -->
+            <div class="bg-green-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for sales" class="rounded-lg mb-4 mx-auto" src="images/sem.png"
+                    style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-green-800">
+                    SMEs
+                </h2>
+                <p class="text-green-700 text-sm leading-relaxed">
+                    Empower local businesses with modern websites to reach broader audiences and grow their digital
+                    presence.
+                </p>
+            </div>
+            <!-- Engineering Card -->
+            <div class="bg-purple-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for engineering" class="rounded-lg mb-4 mx-auto"
+                    src="images/travel.jpg" style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-purple-800">
+                    Tourism and Travel
+                </h2>
+                <p class="text-purple-700 text-sm leading-relaxed">
+                    Create interactive platforms to showcase Sri Lanka's rich cultural and natural attractions for
+                    global
+                    travelers.
+                </p>
+            </div>
+            <!-- Customer Support Card -->
+            <div class="bg-blue-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for customer support" class="rounded-lg mb-4 mx-auto"
+                    src="images/e_commerce.jpg" style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-blue-800">
+                    E-commerce
+                </h2>
+                <p class="text-blue-700 text-sm leading-relaxed">
+
+                    Provide customized online shopping platforms to connect local sellers with a broader audience across
+                    the nation.
+                </p>
+            </div>
+            <!-- Design Card -->
+            <div class="bg-indigo-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for design" class="rounded-lg mb-4 mx-auto" src="images/lms.jpg"
+                    style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-indigo-800">
+                    Education
+                </h2>
+                <p class="text-indigo-700 text-sm leading-relaxed">
+                    Develop e-learning platforms to enhance accessibility and improve the quality of education across
+                    the
+                    island.
+                </p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8 px-4 pt-8 hidden-card hidden">
+            <!-- Marketing Card -->
+            <div class="bg-yellow-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for marketing" class="rounded-lg mb-4 mx-auto"
+                    src="images/hospitality.webp" style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-yellow-800">
+                    Hospitality
+                </h2>
+                <p class="text-yellow-700 text-sm leading-relaxed">
+                    Design websites for hotels and restaurants to improve reservations and showcase their unique
+                    offerings.
+                </p>
+            </div>
+            <!-- HR Card -->
+            <div class="bg-red-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for HR" class="rounded-lg mb-4 mx-auto" src="images/agro.jpg"
+                    style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-red-800">
+                    Agriculture
+                </h2>
+                <p class="text-red-700 text-sm leading-relaxed">
+                    Support farmers and agri-businesses with digital tools to market produce and access resources.
+                </p>
+            </div>
+            <!-- Education Card -->
+            <div class="bg-teal-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for education" class="rounded-lg mb-4 mx-auto" src="images/gym.webp"
+                    style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-teal-800">
+                    Gym and Fitness
+                </h2>
+                <p class="text-teal-700 text-sm leading-relaxed">
+                    Build websites for gyms and fitness centers to manage memberships and promote healthy lifestyles.
+                </p>
+            </div>
+            <!-- Healthcare Card -->
+            <div class="bg-pink-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for healthcare" class="rounded-lg mb-4 mx-auto"
+                    src="images/event.jpg" style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-pink-800">
+                    Event Management
+                </h2>
+                <p class="text-pink-700 text-sm leading-relaxed">
+                    Offer sleek solutions for event organizers to streamline bookings and showcase services.
+                </p>
+            </div>
+        </div>
+        <div class="text-center mt-8" class="textContent">
+            <button id="toggleButton" class="bg-[#6B46C1] text-white px-4 py-2 rounded-full" onclick="toggleCards()">
+                View more
+            </button>
+        </div>
+
+    </div>
+
+
+
+    <!-- Products -->
+
+
+
+    <!-- Hero -->
+
+    <!-- Pricing -->
+
+    <!-- Domains -->
+
+    <!-- Products -->
+    <style>
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            height: 184px;
+            overflow: hidden;
+        }
+
+        .slideshow-slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slideshow-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slideshow-container .active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .features-list {
+                display: none;
+            }
+
+            .view-features-btn {
+                display: block;
+            }
+
+            .slideshow-container {
+                max-width: 100%;
+                /* height: auto; */
+            }
+
+            .slideshow-slide img {
+                width: 100%;
+                /* height: auto; */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .view-features-btn {
+                display: none;
+            }
+        }
+    </style>
+    <div class="text-center py-12">
+        <h1 class="text-heading ">
+           </h1>
+                <p class="text-lg text-gray-600 mt-4">
+                    Empowering your business with cutting-edge systems designed to .
+                
+                    All-In-One Business Software
+        </h1>
+        <p class="text-xl mt-4" style="color: #707C8C;">
+            Boost productivity using our WhatsApp-first ERP software for small businesses
+           
+        </p>
+    </div>
+    <div class="flex items-center justify-center">
+        <div class="flex flex-col gap-6 w-full max-w-6xl px-4">
+            <!-- Basic Plan -->
+            <div class="bg-white rounded-lg shadow-lg p-6 w-full ">
+                <div class="flex flex-col md:flex-row gap-4 md:gap-16">
+                    <div class="slideshow-container relative" id="slideshow-basic">
+                        <div class="slideshow-slide active">
+                            <img alt="Screenshot of the Basic plan dashboard" height="150"
+                                src="https://storage.googleapis.com/a1aa/image/KBpUTMlqJJ4tLBCgwhSSn6tBcPOO8enzz4SpgLU1ip6Zij8JA.jpg"
+                                width="200" />
+                        </div>
+                        <div class="slideshow-slide">
+                            <img alt="Screenshot of the Basic plan analytics" height="150"
+                                src="https://storage.googleapis.com/a1aa/image/vVafkVTyGLQOHS7A45ESWuCS2EWZfX8kRETEZ4GYBuAyEH5TA.jpg"
+                                width="200" />
+                        </div>
+                        <div class="slideshow-slide">
+                            <img alt="Screenshot of the Basic plan settings" height="150"
+                                src="https://storage.googleapis.com/a1aa/image/8qDZWUGNh442BJH6LynfSWYVA75A0PyBRz58TNHKZvmaij8JA.jpg"
+                                width="200" />
+                        </div>
+                        <button
+                            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
+                            onclick="plusSlides(-1, 'slideshow-basic')">&#10094;</button>
+                        <button
+                            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
+                            onclick="plusSlides(1, 'slideshow-basic')">&#10095;</button>
+                    </div>
+                    <div class="text-center">
+                        <h2 class="font-bold text-xl md:mb-6">Comprehensive Gym Management System</h2>
+                        <div class="flex flex-col md:flex-row gap-16">
+
+                            <ul class="space-y-4 features-list" id="features-basic">
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-gray-900 mr-2">
+                                    </i>
+                                    AI Advisor
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-gray-900 mr-2">
+                                    </i>
+                                    Unlimited auto tracking
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-gray-900 mr-2">
+                                    </i>
+                                    1 Day transaction clearing
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-gray-900 mr-2">
+                                    </i>
+                                    1 Day transaction clearing
+                                </li>
+                            </ul>
+                            <ul class="space-y-4 features-list" id="features-basic">
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-gray-900 mr-2">
+                                    </i>
+                                    AI Advisor
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-gray-900 mr-2">
+                                    </i>
+                                    Unlimited auto tracking
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-gray-900 mr-2">
+                                    </i>
+                                    1 Day transaction clearing
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-gray-900 mr-2">
+                                    </i>
+                                    1 Day transaction clearing
+                                </li>
+                            </ul>
+                            <button class="view-features-btn mt-6 bg-gray-900 text-white py-2 px-4 rounded-lg"
+                                onclick="toggleFeatures('basic', this)">
+                                View Features
+                            </button>
+                            <!-- <div class="flex flex-col justify-center items-center">
+                                                <div class="text-sm font-semi text-purple-600 mt-4">
+                                                    Starting From Just
+                                                </div>
+                                                <div class="text-4xl font-bold text-purple-600 mt-4">
+                                                    $80
+                                                </div>
+                                                <button class="mt-6 bg-purple-600 text-white py-2 px-4 rounded-lg">
+                                                    Buy Now
+                                                </button>
+                                            </div> -->
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-col gap-6justify-center items-center">
+                        <div class="text-sm font-semi text-gray-800 md:mt-4">
+                            Starting From Just
+                        </div>
+                        <div class="text-4xl font-bold text-gray-800 mt-4">
+                            $80
+                        </div>
+                        <button class="mt-4 md:mt-6 bg-gray-800 text-white py-2 px-4 rounded-lg">
+                            Buy Now
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Advanced Plan -->
+            <div class="bg-white rounded-lg shadow-lg p-6 w-full mb-6">
+                <div class="flex flex-col md:flex-row gap-4 md:gap-16">
+                    <div class="slideshow-container relative" id="slideshow-basic">
+                        <div class="slideshow-slide active">
+                            <img alt="Screenshot of the Basic plan dashboard" height="150"
+                                src="https://storage.googleapis.com/a1aa/image/KBpUTMlqJJ4tLBCgwhSSn6tBcPOO8enzz4SpgLU1ip6Zij8JA.jpg"
+                                width="200" />
+                        </div>
+                        <div class="slideshow-slide">
+                            <img alt="Screenshot of the Basic plan analytics" height="150"
+                                src="https://storage.googleapis.com/a1aa/image/vVafkVTyGLQOHS7A45ESWuCS2EWZfX8kRETEZ4GYBuAyEH5TA.jpg"
+                                width="200" />
+                        </div>
+                        <div class="slideshow-slide">
+                            <img alt="Screenshot of the Basic plan settings" height="150"
+                                src="https://storage.googleapis.com/a1aa/image/8qDZWUGNh442BJH6LynfSWYVA75A0PyBRz58TNHKZvmaij8JA.jpg"
+                                width="200" />
+                        </div>
+                        <button
+                            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
+                            onclick="plusSlides(-1, 'slideshow-basic')">&#10094;</button>
+                        <button
+                            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
+                            onclick="plusSlides(1, 'slideshow-basic')">&#10095;</button>
+                    </div>
+                    <div class="text-center">
+                        <h2 class="font-bold text-xl  md:mb-6">Comprehensive Gym Management System</h2>
+                        <div class="flex flex-col md:flex-row gap-16">
+
+                            <ul class="space-y-4 features-list" id="features-basic">
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2">
+                                    </i>
+                                    AI Advisor
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2">
+                                    </i>
+                                    Unlimited auto tracking
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2">
+                                    </i>
+                                    1 Day transaction clearing
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2">
+                                    </i>
+                                    1 Day transaction clearing
+                                </li>
+                            </ul>
+                            <ul class="space-y-4 features-list" id="features-basic">
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2">
+                                    </i>
+                                    AI Advisor
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2">
+                                    </i>
+                                    Unlimited auto tracking
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2">
+                                    </i>
+                                    1 Day transaction clearing
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2">
+                                    </i>
+                                    1 Day transaction clearing
+                                </li>
+                            </ul>
+                            <button class="view-features-btn mt-6 bg-purple-600 text-white py-2 px-4 rounded-lg"
+                                onclick="toggleFeatures('basic', this)">
+                                View Features
+                            </button>
+                            <!-- <div class="flex flex-col justify-center items-center">
+                                <div class="text-sm font-semi text-purple-600 mt-4">
+                                    Starting From Just
+                                </div>
+                                <div class="text-4xl font-bold text-purple-600 mt-4">
+                                    $80
+                                </div>
+                                <button class="mt-6 bg-purple-600 text-white py-2 px-4 rounded-lg">
+                                    Buy Now
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-col gap-6justify-center items-center">
+                        <div class="text-sm font-semi text-gray-800 md:mt-4">
+                            Starting From Just
+                        </div>
+                        <div class="text-4xl font-bold text-gray-800 mt-4">
+                            $80
+                        </div>
+                        <button class="mt-4 md:mt-6 bg-gray-800 text-white py-2 px-4 rounded-lg">
+                            Buy Now
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script>
+            function plusSlides(n, slideshowId) {
+                let slides = document.querySelectorAll(`#${slideshowId} .slideshow-slide`);
+                let activeIndex = Array.from(slides).findIndex(slide => slide.style.display === "block");
+                slides[activeIndex].style.display = "none";
+                let newIndex = activeIndex + n;
+                if (newIndex >= slides.length) {
+                    newIndex = 0;
+                }
+                if (newIndex < 0) {
+                    newIndex = slides.length - 1;
+                }
+                slides[newIndex].style.display = "block";
+            }
+
+            document.querySelectorAll('.slideshow-container').forEach(container => {
+                container.querySelector('.slideshow-slide').style.display = 'block';
+            });
+
+            function toggleFeatures(plan, button) {
+                const featuresList = document.querySelectorAll(`#features-${plan}`);
+                featuresList.forEach(list => {
+                    if (list.style.display === "none" || list.style.display === "") {
+                        list.style.display = "block";
+                        button.textContent = "Hide Features";
+                    } else {
+                        list.style.display = "none";
+                        button.textContent = "View All Features";
+                    }
+                });
+            }
+        </script>
+    </div>
+    <!-- FAQ -->
+
+    <!-- Contact -->
+
+    <!-- FAQ -->
+    <style>
+        .main-heading {
+            font-size: 2.5rem;
+            /* Adjust font size to match */
+            /*font-weight: 900;  Bold font for the main heading */
+            color: #2b2a2a;
+            /* Dark text color, adjust to match */
+            margin-bottom: 0.5rem;
+            /* Space below the heading */
+        }
+
+        .sub-heading {
+            font-size: 1rem;
+            /* Smaller font for subheading */
+            font-weight: 400;
+            /* Regular font weight for subheading */
+            color: #6B7280;
+            /* Subtle gray for text */
+            /* Ensure no extra margins */
+        }
+    </style>
+    <section class="py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+                    All-In-One Business Software
+                </h2>
+                <p class="sub-heading  mt-4 text-center">
+                    Empowering your business with cutting-edge systems designed to streamline operations
+                </p>
+            </div>
+
+            <div class="accordion-group" data-accordion="default-accordion">
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-two-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-two-with-icon" aria-expanded="false">
+                        <h5>How do I update my billing information?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4 "
+                        aria-labelledby="basic-heading-two" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            To update your billing information, log in to your account, go to the 'Billing' section, and
+                            update your payment details. Save the changes to ensure your billing information is updated.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-two-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-two-with-icon" aria-expanded="false">
+                        <h5>How do I update my billing information?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-two" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            To update your billing information, log in to your account, go to the 'Billing' section, and
+                            update your payment details. Save the changes to ensure your billing information is updated.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-three-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-three-with-icon" aria-expanded="false">
+                        <h5>How can I contact customer support?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-three-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-three" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            To contact customer support, visit the 'Contact Us' page on our website and fill out the
+                            contact
+                            form. You can also reach us via email or phone as provided on the same page.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-four-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-four-with-icon" aria-expanded="false">
+                        <h5>How do I delete my account?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-four-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-four" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            To delete your account, log in to your account, go to the 'Account Settings' section, and
+                            click
+                            on 'Delete Account.' Follow the prompts to confirm the deletion of your account.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-four-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-four-with-icon" aria-expanded="false">
+                        <h5>How do I delete my account?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-four-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-four" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            To delete your account, log in to your account, go to the 'Account Settings' section, and
+                            click
+                            on 'Delete Account.' Follow the prompts to confirm the deletion of your account.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.accordion-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+                button.classList.toggle('accordion-active');
+                if (button.classList.contains('accordion-active')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                    button.setAttribute('aria-expanded', 'true');
+                } else {
+                    accordionContent.style.maxHeight = 0;
+                    button.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+
+    <!-- Why choose us -->
+    <div class="mb-6">
+        <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+            All-In-One Business Software
+        </h2>
+        <p class="sub-heading  mt-4 text-center">
+            Empowering your business with cutting-edge systems designed to streamline operations
+        </p>
+    </div>
+    <div class="max-w-7xl mx-auto p-6  rounded-lg ">
+        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6">
+            <!-- Left Card (2/3 width on large screens) -->
+            <div class="lg:col-span-5 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+
+                <div class="flex md:gap-4 flex-col md:flex-row">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Customized Solutions</h3>
+                        <p class="text-gray-600 mb-6">
+                            We don’t believe in one-size-fits-all. Every website we develop is tailored to meet your
+                            specific business needs,
+                            ensuring a perfect fit for your goals.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://via.placeholder.com/300x170" alt="Progress Chart Example"
+                            class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card (1/3 width on large screens) -->
+            <div class="lg:col-span-4 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Expert Team</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our team of experienced developers, designers, and strategists work collaboratively to
+                            deliver cutting-edge solutions.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://via.placeholder.com/300x240" alt="Progress Chart Example"
+                            class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 mt-4">
+
+
+            <!-- Right Card (1/3 width on large screens) -->
+            <div class="lg:col-span-4 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Fast Turnaround Time</h3>
+                        <p class="text-gray-600 mb-6">
+                            We prioritize efficiency without compromising quality, ensuring your project is delivered on
+                            time.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://via.placeholder.com/300x240" alt="Progress Chart Example"
+                            class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+            <!-- Left Card (2/3 width on large screens) -->
+            <div class="lg:col-span-5 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Ongoing Support</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our job doesn’t end at delivery. We provide continuous support and maintenance to keep your
+                            website running smoothly.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://via.placeholder.com/300x170" alt="Progress Chart Example"
+                            class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact us -->
+    <div class=" pb-6 pt-2 mt-16">
+        <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+            All-In-One Business Software
+        </h2>
+        <p class="sub-heading mt-4 text-center text-purple-600">
+            Empowering your business with cutting-edge systems designed to streamline operations
+        </p>
+    </div>
+    <div class=" flex justify-center items-center pb-6 ">
+
+        <div class="container mx-auto p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Left Side: Contact Form -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100">
+                    <form class="space-y-4">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-3 top-3 text-purple-400"></i>
+                                <input type="text" placeholder="Name"
+                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-phone-alt absolute left-3 top-3 text-purple-400"></i>
+                                <input type="text" placeholder="Phone Number"
+                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-building absolute left-3 top-3 text-purple-400"></i>
+                                <input type="text" placeholder="Business Name"
+                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-industry absolute left-3 top-3 text-purple-400"></i>
+                                <input type="text" placeholder="Industry/Type of Business"
+                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-map-marker-alt absolute left-3 top-3 text-purple-400"></i>
+                                <input type="text" placeholder="E-mail address"
+                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-globe absolute left-3 top-3 text-purple-400"></i>
+                                <input type="text" placeholder="Website URL (Optional)"
+                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-dollar-sign absolute left-3 top-3 text-purple-400"></i>
+                                <input type="text" placeholder="Budget"
+                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-calendar-alt absolute left-3 top-3 text-purple-400"></i>
+                                <input type="text" placeholder="Expected Delivery Time"
+                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                        </div>
+                        <textarea placeholder="Additional Notes or Requirements"
+                            class="w-full p-4 border border-purple-300 rounded-lg h-30 focus:ring-purple-500 focus:border-purple-500"></textarea>
+
+                        <button
+                            class="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-full w-full md:w-auto">Send
+                            Request</button>
+                    </form>
+                </div>
+                <!-- Right Side: Cards -->
+                <div class="space-y-4">
+                    <!-- Next Steps Card -->
+                    <div class="bg-white p-6 rounded-2xl flex flex-col items-center shadow-md border border-gray-100">
+                        <div class="text-3xl font-bold mb-4">Next Steps</div>
+                        <div class="text-lg mb-4">Here's what happens after you make a request </div>
+                        <ul class="list-disc list-inside text-left">
+                            <li>We review your requirements.</li>
+                            <li>Our team contacts you for further details.</li>
+                            <li>We provide a project proposal and timeline.</li>
+                            <li>Upon agreement, we start the development process.</li>
+                            <li>Regular updates and reviews until project completion.</li>
+                        </ul>
+                    </div>
+                    <!-- Chat With Our Team Card -->
+                    <div class="bg-gray-200 text-black p-6 rounded-2xl flex flex-col shadow-md items-center">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-envelope text-2xl text-purple-700"></i>
+                            <span class="ml-2">Chat With Our Team</span>
+                        </div>
+                        <div class="text-xl font-bold mb-4">email@pagedone.com</div>
+                        <button class="bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded-full">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="w-full">
+        <div class="mx-0 px-4 bg-purple-50 w-full">
+            <div class="flex justify-center items-center h-full w-full py-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-purple-800 text-center">
+                    <div>
+                        <h3 class="font-bold text-purple-900 mb-4">
+                            Product
+                        </h3>
+                        <ul>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Why Draftbit
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Experts
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-purple-900 mb-4">
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Products
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Our Domains
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Our Service
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    FAQ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-purple-900 mb-4">
+                            Support
+                        </h3>
+                        <ul>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Community
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Resources
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Docs
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Affiliates
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-purple-900 mb-4">
+                            Get started
+                        </h3>
+                        <ul>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Create Account
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                    Sign In
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-[120px] flex justify-between items-top p-3 bg-purple-100">
+            <div class="flex space-x-4 pt-8">
+                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
+                    <i class="fab fa-twitter text-purple-700 icon-hover"></i>
+                </a>
+                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
+                    <i class="fab fa-linkedin-in text-purple-700 icon-hover"></i>
+                </a>
+                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
+                    <i class="fab fa-youtube text-purple-700 icon-hover"></i>
+                </a>
+                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
+                    <i class="fab fa-instagram text-purple-700 icon-hover"></i>
+                </a>
+                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
+                    <i class="fab fa-tiktok text-purple-700 icon-hover"></i>
+                </a>
+                <a class="text-purple-800 hover:text-purple-600" href="#">Loom Terms & Policies</a>
+            </div>
+            <div class="text-right pt-8">
+                <div class="flex items-center space-x-2 justify-end">
+                    <img src="https://placehold.co/20x20" alt="Atlassian logo" class="h-5">
+                    <span class="text-purple-900 font-bold">ATLASSIAN</span>
+                </div>
+                <div class="text-purple-700 text-sm">
+                    © 2024, Loom, Inc. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

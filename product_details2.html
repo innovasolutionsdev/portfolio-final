@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Navbar Example
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
+    <style>
+        .icon-hover:hover {
+            color: #6B46C1;
+            /* Tailwind's purple-600 */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Full viewport height */
+        }
+
+        .w-full {
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        function toggleCards() {
+            const hiddenCards = document.querySelectorAll('.hidden-card');
+            hiddenCards.forEach(card => {
+                card.classList.toggle('hidden');
+            });
+
+
+            // Change button text
+            const toggleButton = document.getElementById('toggleButton');
+            if (toggleButton.innerText === "View more") {
+                toggleButton.innerText = "Hide";
+            } else {
+                toggleButton.innerText = "View more";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        .main-heading {
+            font-size: 2.5rem;
+            /* Adjust font size to match */
+            /*font-weight: 900;  Bold font for the main heading */
+            color: #2b2a2a;
+            /* Dark text color, adjust to match */
+            margin-bottom: 0.5rem;
+            /* Space below the heading */
+        }
+
+        .sub-heading {
+            font-size: 1rem;
+            /* Smaller font for subheading */
+            font-weight: 400;
+            /* Regular font weight for subheading */
+            color: #6B7280;
+            /* Subtle gray for text */
+            /* Ensure no extra margins */
+        }
+
+        /* Heading Style */
+        .card-heading {
+            font-weight: 700;
+            /* Bold text */
+            font-size: 1rem;
+            /* Approximately 20px */
+            color: #1A1A1A;
+            /* Dark navy or deep gray */
+
+        }
+
+        /* Paragraph Style */
+        .card-description {
+            font-weight: 200;
+            /* Regular text */
+            font-size: 1rem;
+            /* Approximately 16px */
+            color: #6B6B6B;
+            /* Light gray text */
+            line-height: 1.5;
+            /* Comfortable line spacing */
+            margin: 0;
+            /* No extra margins */
+        }
+    </style>
+    <nav class="flex items-end justify-between p-4">
+        <div class="flex items-center">
+            <img alt="Company logo" class="h-10 w-10" height="50"
+                src="https://storage.googleapis.com/a1aa/image/JDaeePfYopO19Ibb8uBdg3UAxgW9g95BOlZ4DHR67Bf7MKkPB.jpg"
+                width="50" />
+            <span class="ml-2 text-xl font-bold text-gray-900">
+                THENA
+            </span>
+        </div>
+        <div class="flex items-center space-x-6">
+            <div class="relative group">
+                <button class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out">
+                    Products
+                    <i class="fas fa-chevron-down ml-1 text-sm">
+                    </i>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                    class="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md transition duration-300 ease-in-out">
+                    <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">
+                        Product 1
+                    </a>
+                    <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">
+                        Product 2
+                    </a>
+                </div>
+            </div>
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out" href="#">
+                Pricing
+            </a>
+
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out" href="#">
+                Our Domains
+            </a>
+
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out" href="#">
+                FAQ
+            </a>
+
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out"
+                href="index.html">
+                Home
+            </a>
+
+        </div>
+        <div class="flex items-center space-x-4">
+            <a class="text-gray-700 font-medium hover:text-purple-600 transition duration-300 ease-in-out" href="#">
+                Login
+            </a>
+            <a class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out"
+                href="#">
+                Request a demo
+            </a>
+        </div>
+    </nav>
+
+
+
+    <!-- Hero Section - Demo Video -->
+    <!-- Hero Section - Demo Video -->
+    <div class="hero-container flex items-center justify-center mt-6 pt-16 mb-12">
+        <div class="text-center ">
+            <h1 class="font-black text-gray-900 leading-tight"
+                style="font-family: 'Inter', 'Inter Placeholder', sans-serif; font-size: 5rem; font-weight: 1000;">
+                DineMate</h1>
+            <p>A companion for diners & restaurant owners !</p>
+        </div>
+    </div>
+
+    <div class="flex mb-6 justify-center items-center p-12 ">
+        <div class="relative w-9/10 h-screen rounded-lg shadow-lg p-1 bg-gray-900">
+            <video id="promoVideo" autoplay loop class="w-full h-full object-cover rounded-lg">
+                <source src="images/promo1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 flex flex-col justify-end items-start p-8 md:p-16 lg:p-24 text-white">
+                <div class="mt-6 flex space-x-4 justify-end w-full">
+                    <button class="bg-black text-white px-6 py-2 rounded-full text-sm md:text-base lg:text-lg">
+                        Learn more
+                    </button>
+                    <button
+                        class="border border-black text-black px-6 py-2 rounded-full text-sm md:text-base lg:text-lg">
+                        Buy
+                    </button>
+                    <button id="muteButton"
+                        class="bg-gray-700 text-white px-6 py-2 rounded-full text-sm md:text-base lg:text-lg">
+                        Mute
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('promoVideo');
+        const muteButton = document.getElementById('muteButton');
+
+        muteButton.addEventListener('click', () => {
+            if (video.muted) {
+                video.muted = false;
+                muteButton.innerText = 'Mute';
+            } else {
+                video.muted = true;
+                muteButton.innerText = 'Unmute';
+            }
+        });
+    </script>
+
+    <!-- Product Features -->
+    <div class="mb-6 mt-8">
+        <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+            All-In-One Restaurant management software
+        </h2>
+        <p class="sub-heading  mt-4 text-center">
+            Manage your restaurant effortlessly. From table reservations to order management, we have all the tools you need.
+        </p>
+    </div>
+    <div class="max-w-7xl mx-auto p-6  rounded-lg ">
+        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6">
+            <!-- Left Card (2/3 width on large screens) -->
+            <div class="lg:col-span-5 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+
+                <div class="flex md:gap-4 flex-col md:flex-row">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Billing System</h3>
+                        <p class="text-gray-600 mb-6">
+                            Streamline your billing process with our automated system. Monitor payments, generate invoices, and keep track of financial records effortlessly.
+                        </p>
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="images/membership.png" alt="Progress Chart Example" class="rounded-lg"
+                            style="width: 300px; height: 170px;" />
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card (1/3 width on large screens) -->
+            <div class="lg:col-span-4 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Inventory Management</h3>
+                        <p class="text-gray-600 mb-6">Efficiently manage your restaurant's inventory. Track stock levels, manage suppliers, and reduce waste with real-time updates.
+                        </p>
+
+
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="images/user.png" alt="Progress Chart Example" class="rounded-lg"
+                            style="width: 300px; height: 170px; object-fit: cover;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 mt-4">
+
+
+            <!-- Right Card (1/3 width on large screens) -->
+            <div class="lg:col-span-4 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">CMS Integration</h3>
+                        <p class="text-gray-600 mb-6">
+                            Seamlessly integrate with your content management system. Update menus, manage promotions, and keep your website fresh and engaging.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="images/schedule.png" alt="Progress Chart Example" class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+            <!-- Left Card (2/3 width on large screens) -->
+            <div class="lg:col-span-5 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">CRM Integration</h3>
+                        <p class="text-gray-600 mb-6">
+
+                            Enhance customer relationships with our CRM integration. Keep track of customer preferences, manage reservations, and personalize their dining experience.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="images/notification.jpg" alt="Progress Chart Example" class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4 mt-6">
+        <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+            We didn't forget your Diners
+        </h2>
+        <p class="sub-heading  mt-4 text-center">
+            Keep your members engaged and motivated with our member-focused features
+        </p>
+    </div>
+    <div class="max-w-7xl mx-auto p-6  rounded-lg ">
+        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 mt-4">
+            <!-- Left Card (2/3 width on large screens) -->
+            <div class="lg:col-span-5 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+
+                <div class="flex md:gap-4 flex-col md:flex-row">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Table Reservations</h3>
+                        <p class="text-gray-600 mb-6">
+                            Streamline your table reservation process. Allow customers to book tables online and manage reservations effortlessly to avoid overbooking.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="images/transaction.png" alt="Progress Chart Example" class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card (1/3 width on large screens) -->
+            <div class="lg:col-span-4 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Order Tracking</h3>
+                        <p class="text-gray-600 mb-6">
+                            Keep track of all your restaurant orders in real-time. Monitor order statuses, manage deliveries, and ensure timely service to enhance customer satisfaction.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="images/order.png" width="300" height="170" alt="Progress Chart Example"
+                            class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 mt-4">
+            <!-- Left Card (2/3 width on large screens) -->
+            <div class="lg:col-span-5 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+
+                <div class="flex md:gap-4 flex-col md:flex-row">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Table Reservations</h3>
+                        <p class="text-gray-600 mb-6">
+                            Streamline your table reservation process. Allow customers to book tables online and manage reservations effortlessly to avoid overbooking.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="images/progress.png" alt="Progress Chart Example" class="rounded-lg"
+                            style="width: 320; height: 170;" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card (1/3 width on large screens) -->
+            <div class="lg:col-span-4 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- Example Content for Left Card -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">QR Code Integration</h3>
+                        <p class="text-gray-600 mb-6">
+                            Enhance the dining experience with QR code integration. Allow customers to view menus, place orders, and make payments directly from their smartphones.
+
+                        </p>
+                    </div>
+                    <div class="md:w-1/2" style="width: 320; height: 170;">
+                        <img src="images/request.png" style="width: 320; height: 170;" alt="Progress Chart Example"
+                            class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Section -->
+
+
+    <!-- Product Features -->
+    <!-- Pricing Section -->
+    <div class="mb-2 mt-6">
+        <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+            Choose your plan
+        </h2>
+        <p class="sub-heading  mt-4 text-center">
+            7 Days free trial. No credit card required.
+        </p>
+    </div>
+
+
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8">
+            <!-- Free Plan -->
+            <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4 mt-8">
+                <h2 class="text-xl font-semibold mb-4">Standard</h2>
+                <div class="text-3xl font-bold mb-6">Rs 7,500 <span class="text-lg font-normal text-gray-500">
+                        month</span></div>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized
+                        Design</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive
+                        Design</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Live Order Tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Billing System</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and
+                        Domain</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Mobile
+                        Application</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Stock Management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Content
+                        Management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Cheff Dashboard</li>
+                    
+                </ul>
+                <div class="flex justify-center">
+                    <button class="bg-gray-800 text-white py-2 px-4 rounded-full">Purchase Plan</button>
+                </div>
+            </div>
+
+            <!-- Advanced Plan -->
+            <div class="bg-gray-300 rounded-2xl shadow-lg p-6 w-full md:w-1/4 relative mb-4">
+                <div class="absolute top-0 left-0 right-0 bg-gray-800  text-white text-center py-2 rounded-t-2xl">MOST
+                    POPULAR</div>
+                <h2 class="text-xl font-semibold mb-4 mt-8">Premium</h2>
+                <div class="text-3xl font-bold ">Rs 10,500<span class="text-sm font-normal text-gray-500 ml-2">month.
+                    </span></div>
+                <p class="text-sm mb-6 mt-2 text-gray-600"> You get free Rs.4800 implementation!</p>
+
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized
+                        Design</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive
+                        Design</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Live Order Tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Billing System</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and
+                        Domain</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile
+                        Application</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Stock Management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content
+                        Management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Cheff Dashboard</li>
+                </ul>
+                <div class="flex justify-center">
+                    <button class="bg-gray-800 text-white py-2 px-4 rounded-full">Purchase Plan</button>
+                </div>
+            </div>
+
+            <!-- Team Plan -->
+            <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4 mt-8">
+                <h2 class="text-xl font-semibold mb-4">1 Year</h2>
+                <div class="text-3xl font-bold mb-6">Rs 98,500 <span class="text-sm font-normal text-gray-500"> year.
+                        <br>You save Rs.27,500!</span></div>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized
+                        Design</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive
+                        Design</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Live Order Tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Billing System</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and
+                        Domain</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile
+                        Application</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Stock Management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content
+                        Management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Cheff Dashboard</li>
+                </ul>
+                <div class="flex justify-center">
+                    <button class="bg-gray-800 text-white py-2  px-4 rounded-full">Purchase Plan</button>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4 mt-8">
+                <h2 class="text-xl font-semibold mb-4">Lifetime</h2>
+                <div class="text-3xl font-bold ">Rs 650,000 <span class="text-sm  text-gray-500"></div>
+                <p class="text-sm mb-6 mt-2 text-gray-500"> You are only paying for 6.5 years!</p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized
+                        Design</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive
+                        Design</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Live Order Tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Billing System</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and
+                        Domain</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile
+                        Application</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Stock Management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content
+                        Management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Cheff Dashboard</li>
+                </ul>
+                <div class="flex justify-center">
+                    <button class="bg-gray-800 text-white py-2 px-4 rounded-full">Purchase Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why choose us -->
+    <div class="mx-20">
+        <div class="text-center py-12">
+            <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+                Why choose us ?
+            </h2>
+            <p class="sub-heading  mt-4 text-center">
+                We don't just provide a website, we provide a solution
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8 px-4">
+            <!-- Sales Card -->
+            <div class="bg-gray-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for sales" class="rounded-lg mb-4 mx-auto" src="images/cancell.webp"
+                    style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">
+                    Freedom to Leave
+
+                </h2>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    No commitments, no pressure—cancel your services whenever you want, hassle-free.
+                </p>
+            </div>
+            <!-- Engineering Card -->
+            <div class="bg-gray-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for engineering" class="rounded-lg mb-4 mx-auto"
+                    src="images/wait.jpg" style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">
+                    No Waiting Time
+
+                </h2>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Skip the long development process—get your website live and ready to use instantly.
+                </p>
+            </div>
+            <!-- Customer Support Card -->
+            <div class="bg-gray-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for customer support" class="rounded-lg mb-4 mx-auto"
+                    src="images/customize.jpg" style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">
+                    Tailored for You
+                </h2>
+                <p class="text-gray-400 text-sm leading-relaxed">
+
+                    Every element is fully customizable to match your business.
+                </p>
+            </div>
+            <!-- Design Card -->
+            <div class="bg-gray-100 rounded-3xl p-6 text-center w-full md:w-1/4">
+                <img alt="A person in a video call for design" class="rounded-lg mb-4 mx-auto" src="images/support.jpg"
+                    style="width: 225px; height: 150px;" />
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">
+                    Support That Delivers
+                </h2>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Enjoy continuous support—no payment required if we don’t meet your expectations.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Feature list -->
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <div class="mb-6 mt-16 mb-4">
+        <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+            Want to dig deeper into the features?
+        </h2>
+        <p class="sub-heading  mt-4 text-center">
+            Here's a detailed list of features that come with our gym management software
+        </p>
+    </div>
+    <section class="max-w-6xl mx-auto p-12 bg-gray-100 rounded-2xl shadow-lg">
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">Admin Features</h1>
+        <table class="w-full">
+            <tbody>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time1')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">User Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Manage gym members, trainers, and staff with detailed user information,
+                            roles, and membership status.</p>
+                        <p id="time1" class="sub-heading hidden">Pain Point: Eliminates manual user tracking and reduces
+                            errors by streamlining member and staff management in one centralized system.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time2')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Membership Plan Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Create, customize, and manage different membership plans, including
+                            pricing and duration.</p>
+                        <p id="time2" class="sub-heading hidden">Pain Point: Prevents confusion over membership options
+                            and simplifies assigning plans, ensuring members understand their subscriptions.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time3')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Membership Payments Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Track membership payments, payment history, and multiple payment methods
+                            efficiently.</p>
+                        <p id="time3" class="sub-heading hidden">Pain Point: Reduces missed payments and manual tracking
+                            errors, ensuring timely renewals and financial accuracy.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time4')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">SMS Notifications</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Send automated notifications to members before their membership expires.
+                        </p>
+                        <p id="time4" class="sub-heading hidden">Reduces membership lapses and ensures consistent
+                            renewals, helping maintain gym revenue flow.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time5')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Schedule Assignment</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading"> Assign users to specific schedules or workout programs with assignment
+                            history tracking.</p>
+                        <p id="time5" class="sub-heading hidden">Pain Point: Eliminates confusion over assigned plans,
+                            improving accountability and member program adherence.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time6')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Schedule Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Create and organize structured workout schedules for easy assignment to
+                            members.</p>
+                        <p id="time6" class="sub-heading hidden">Pain Point: Saves trainers’ time and ensures members
+                            have organized, goal-oriented workout plans.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time7')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Booking Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Schedule and manage bookings for personal training sessions, including
+                            dates, times, and trainers.</p>
+                        <p id="time7" class="sub-heading hidden">Pain Point: Solves scheduling conflicts and
+                            miscommunication by providing a clear overview of session bookings.
+                        </p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time8')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Order Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Track and process orders for gym supplements, merchandise, and other
+                            products with status updates.</p>
+                        <p id="time8" class="sub-heading hidden">Pain Point: Prevents order delays and mismanagement,
+                            ensuring smooth product delivery and member satisfaction.
+                        </p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time9')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Product Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Maintain inventory for gym products, with price, stock, and availability
+                            tracking.</p>
+                        <p id="time9" class="sub-heading hidden">Pain Point: Avoids product shortages and overstocking,
+                            helping gyms manage inventory efficiently and increase sales.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time10')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Gallery Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Upload and manage gym images to showcase events, milestones, and media
+                            highlights.</p>
+                        <p id="time10" class="sub-heading hidden">Enhances gym branding and engagement by visually
+                            sharing achievements and updates with members.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time11')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Transaction Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Record and track all financial transactions, including income, expenses,
+                            and financial reports.</p>
+                        <p id="time11" class="sub-heading hidden">Resolves financial disorganization and provides
+                            transparency for revenue and expense tracking.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time12')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Schedule Request Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Handle schedule requests from members.</p>
+                        <p id="time12" class="sub-heading hidden">Hastle to request new schedules</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0 cursor-pointer"
+                        onclick="toggleImplementationTime('time13')">
+                        <i class="fas fa-check-circle text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Financial Analytics</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading">Analyze financial data and generate reports.</p>
+                        <p id="time13" class="sub-heading hidden">Lack of understanding about expenses and incomes</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        function toggleImplementationTime(id) {
+            const element = document.getElementById(id);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+        }
+    </script>
+    <section class="max-w-6xl mx-auto p-12 mt-6 bg-gray-100 rounded-2xl shadow-lg">
+        <h1 class="text-2xl font-bold mb-6">Gym Member's Features</h1>
+        <table class="w-full">
+            <tbody>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Account Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Easily manage user accounts, roles, and permissions.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Login</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Securely log in to your account with ease.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Membership Payments Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Manage and track membership payments efficiently.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Booking</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Easily book classes and sessions.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Schedule Management</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Manage your workout schedules effectively.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Workout Log</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Log your workouts and track your progress.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Progress Tracking</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Track your fitness progress over time.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Schedule Requesting</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Request custom workout schedules from trainers.</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Registration</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Register for new classes and memberships.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="max-w-6xl mx-auto p-12 mt-6 bg-gray-100 rounded-2xl shadow-lg mb-12">
+        <h1 class="text-2xl font-bold">Additional Features</h1>
+        <p class="sub-heading mb-6 mt-2">You get free 8 hours of implementation with the premium monthly plan !</p>
+        <table class="w-full">
+            <tbody>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Employee Dashboard</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Create and manage detailed fitness profiles for each member. (6 Hours)
+                        </p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Fitness Profile System</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Create and manage detailed fitness profiles for each member. (4 Hours)
+                        </p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Meal Plan Requesting</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Allow members to request personalized meal plans from nutritionists. (2
+                            Hours)</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Nutrition Tracking</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Track daily nutrition intake and monitor dietary habits. (8 Hours)</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">Maintenance and Feedback Reporting</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Report maintenance issues and provide feedback on gym facilities. (2
+                            Hours)</p>
+                    </td>
+                </tr>
+                <tr class="flex flex-col md:flex-row items-center mb-4">
+                    <td class="flex items-center w-full md:w-2/5 mb-2 md:mb-0">
+                        <i class="fas fa-check-circle  text-gray-900 mr-4"></i>
+                        <h2 class="card-heading">In App Messaging</h2>
+                    </td>
+                    <td class="w-full md:w-3/5">
+                        <p class="sub-heading ">Communicate with trainers and other members through the app. (6 Hours)
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- Payment Methods Section -->
+    <div class="flex justify-center items-center  my-16">
+        <div
+            class="bg-white rounded-3xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12 max-w-4xl">
+
+            <!-- Text Content -->
+            <div class="flex-1">
+                <h2 class="text-3xl font-bold text-gray-800">
+                    Local Payment Methods
+                </h2>
+                <p class="text-gray-600 mt-4">
+                    Accept QR payments and over 30 local methods, along with credit/debit cards and cash on delivery.
+                </p>
+                <a class="text-blue-500 mt-6 inline-flex items-center font-medium" href="#">
+                    Learn more
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Payment Methods Grid -->
+            <div class="grid grid-cols-3 gap-6">
+                <div class="flex justify-center">
+                    <img alt="Payment method 1" class="w-16 h-16 object-contain" src="images/koko.png" />
+                </div>
+                <div class="flex justify-center mt-3">
+                    <img alt="Payment method 2" class="w-10 h-10 object-contain" src="images/lankapay.png" />
+                </div>
+                <div class="flex justify-center">
+                    <img alt="Payment method 3" class="w-16 h-16 object-contain" src="images/master.png" />
+                </div>
+                <div class="flex justify-center">
+                    <img alt="Payment method 4" class="w-16 h-16 object-contain" src="images/visa.webp" />
+                </div>
+                <div class="flex justify-center">
+                    <img alt="Payment method 5" class="w-16 h-16 object-contain" src="images/payhere.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ Section -->
+    <section class="py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+                    All-In-One Business Software
+                </h2>
+                <p class="sub-heading  mt-4 text-center">
+                    Empowering your business with cutting-edge systems designed to streamline operations
+                </p>
+            </div>
+
+            <div class="accordion-group px-16" data-accordion="default-accordion">
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-four-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-four-with-icon" aria-expanded="false">
+                        <h5>Can I customize the platform to fit my gym’s needs?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-four-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-four" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Yes, our platform is highly customizable. You can tailor features, branding,
+                            and settings to
+                            match your
+                            gym's
+                            requirements.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-two-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-two-with-icon" aria-expanded="false">
+                        <h5>What is this gym management SaaS platform?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4 "
+                        aria-labelledby="basic-heading-two" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Our platform is an all-in-one solution designed to simplify gym operations.
+                            It helps gym
+                            owners manage memberships,
+                            payments, workout schedules, and more while providing members with easy
+                            access to their
+                            fitness information.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-two-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-two-with-icon" aria-expanded="false">
+                        <h5>How does the platform help gym members?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-two" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Gym members can track their workout history, view personalized schedules,
+                            request new
+                            workout plans, and access
+                            e-membership cards for hassle-free gym access.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-three-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-three-with-icon" aria-expanded="false">
+                        <h5>Is the platform cloud-based?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-three-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-three" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Yes, our platform is fully cloud-based, meaning you can access your data
+                            anytime, anywhere.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-four-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-four-with-icon" aria-expanded="false">
+                        <h5>Does it support multiple devices?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-four-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-four" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Absolutely! Our platform is compatible with desktops, tablets, and
+                            smartphones, ensuring you
+                            can manage your gym on any
+                            device.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-four-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-four-with-icon" aria-expanded="false">
+                        <h5>Who has access to sensitive data?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-four-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-four" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Only authorized users, as defined by the gym owner, can access sensitive
+                            information. You
+                            can control access levels for
+                            your staff.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form Section -->
+    <div class=" pb-6 pt-2 mt-2">
+        <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+            Have custom requirements? Let's talk!
+        </h2>
+        <p class="sub-heading mt-4 text-center ">
+            Fill out the form below and we'll get back to you within 24 hours.
+        </p>
+    </div>
+    <div class=" flex justify-center items-center pb-6 mb-8">
+
+        <div class="container mx-auto p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Left Side: Contact Form -->
+                <div class="bg-gray-100 p-6 rounded-2xl border border-gray-100">
+                    <form class="space-y-4">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-3 top-3 "></i>
+                                <input type="text" placeholder="Name"
+                                    class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-phone-alt absolute left-3 top-3 "></i>
+                                <input type="text" placeholder="Phone Number"
+                                    class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-map-marker-alt absolute left-3 top-3 "></i>
+                                <input type="text" placeholder="E-mail address"
+                                    class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-globe absolute left-3 top-3 "></i>
+                                <input type="text" placeholder="Website URL (Optional)"
+                                    class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-dollar-sign absolute left-3 top-3 "></i>
+                                <input type="text" placeholder="Budget"
+                                    class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-calendar-alt absolute left-3 top-3 "></i>
+                                <input type="text" placeholder="Expected Delivery Time"
+                                    class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                        </div>
+                        <textarea placeholder="Additional Notes or Requirements"
+                            class="w-full p-4 border border-gray-200 rounded-lg h-40 focus:ring-purple-500 focus:border-purple-500"></textarea>
+
+                        <button class=" text-white py-2 px-4 rounded-full w-full md:w-auto">Send
+                            Request</button>
+                    </form>
+                </div>
+                <!-- Right Side: Cards -->
+                <div class="space-y-4">
+                    <!-- Next Steps Card -->
+                    <div
+                        class="bg-gray-100 p-6 rounded-2xl flex flex-col items-center shadow-md border border-gray-100">
+                        <div class="text-3xl font-bold mb-4">Next Steps</div>
+                        <div class="text-lg mb-4">Here's what happens after you make a request </div>
+                        <ul class="list-disc list-inside text-left">
+                            <li>We review your requirements.</li>
+                            <li>Our team contacts you for further details.</li>
+                            <li>We provide a project proposal and timeline.</li>
+                            <li>Upon agreement, we start the development process.</li>
+                            <li>Regular updates and reviews until project completion.</li>
+                        </ul>
+                    </div>
+                    <!-- Chat With Our Team Card -->
+                    <div class="bg-gray-800 text-black p-6 rounded-2xl flex flex-col shadow-md items-center">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-envelope text-2xl text-white"></i>
+                            <span class="ml-2 text-white">Chat With Our Team</span>
+                        </div>
+                        <div class="text-xl text-white font-bold mb-4">email@flexifit.com</div>
+                        <button class="bg-gray-200 hover:bg-gray-800 text-black py-2 px-4 rounded-full">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+
+    <!-- FAQ Section -->
+    <!-- Contact Form Section -->
+    <footer class="w-full">
+        <div class="mx-0 px-4 bg-gray-800 w-full">
+            <div class="flex justify-center items-center h-full w-full py-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-gray-300 text-center">
+                    <div>
+                        <h3 class="font-bold text-gray-100 mb-4">
+                            Product
+                        </h3>
+                        <ul>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Why Draftbit
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Experts
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-100 mb-4">
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Products
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Our Domains
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Our Service
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    FAQ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-100 mb-4">
+                            Support
+                        </h3>
+                        <ul>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Community
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Resources
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Docs
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Affiliates
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-100 mb-4">
+                            Get started
+                        </h3>
+                        <ul>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Create Account
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="hover:text-gray-400 hover:underline" href="#">
+                                    Sign In
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-[120px] flex justify-between items-top p-3 bg-gray-900">
+            <div class="flex space-x-4 pt-8">
+                <a class="bg-gray-700 p-2 rounded-full h-fit hover:bg-gray-600" href="#">
+                    <i class="fab fa-twitter text-gray-300"></i>
+                </a>
+                <a class="bg-gray-700 p-2 rounded-full h-fit hover:bg-gray-600" href="#">
+                    <i class="fab fa-linkedin-in text-gray-300"></i>
+                </a>
+                <a class="bg-gray-700 p-2 rounded-full h-fit hover:bg-gray-600" href="#">
+                    <i class="fab fa-youtube text-gray-300"></i>
+                </a>
+                <a class="bg-gray-700 p-2 rounded-full h-fit hover:bg-gray-600" href="#">
+                    <i class="fab fa-instagram text-gray-300"></i>
+                </a>
+                <a class="bg-gray-700 p-2 rounded-full h-fit hover:bg-gray-600" href="#">
+                    <i class="fab fa-tiktok text-gray-300"></i>
+                </a>
+                <a class="text-gray-400 hover:text-gray-200" href="#">Loom Terms & Policies</a>
+            </div>
+            <div class="text-right pt-8">
+                <div class="flex items-center space-x-2 justify-end">
+                    <img src="https://placehold.co/20x20" alt="Atlassian logo" class="h-5">
+                    <span class="text-gray-100 font-bold">ATLASSIAN</span>
+                </div>
+                <div class="text-gray-500 text-sm">
+                    © 2024, Loom, Inc. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
