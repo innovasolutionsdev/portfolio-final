@@ -58,7 +58,7 @@
 <!-- <body class="bg-gray-50"> -->
 
 <body class="bg-gray-100">
-    <nav class="flex items-center justify-between p-4">
+    <!-- <nav class="flex items-center justify-between p-4">
         <div class="flex items-center cursor-pointer" onclick="window.location.href='index.html'">
             <img alt="Company logo" class="h-10 w-10" height="50"
             src="https://storage.googleapis.com/a1aa/image/JDaeePfYopO19Ibb8uBdg3UAxgW9g95BOlZ4DHR67Bf7MKkPB.jpg"
@@ -74,7 +74,7 @@
                     <i class="fas fa-chevron-down ml-1 text-sm">
                     </i>
                 </button>
-                <!-- Dropdown menu -->
+                
                 <div
                     class="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md transition duration-300 ease-in-out">
                     <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="product_details.html">
@@ -112,8 +112,109 @@
                 Request a demo
             </a>
         </div>
-    </nav>
+    </nav> -->
 
+    <nav class="flex items-center justify-between p-4 bg-white shadow">
+        <div class="flex items-center cursor-pointer" onclick="window.location.href='index.html'">
+         <img alt="Company logo" class="h-8 w-8 mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/TZhK-NPFAq9cnnNiDKBpO0N-yNNesc8kANnTygT9kbM.jpg" width="30"/>
+         <span class="font-bold text-lg text-black">
+          SOLARA
+         </span>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+         <div class="relative group">
+          <button class="text-black font-medium" onclick="toggleDropdown()">
+           Products
+           <i class="fas fa-chevron-down ml-2" id="dropdown-icon">
+           </i>
+          </button>
+          <div class="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg hidden" id="desktop-products">
+           <a class="block px-4 py-2 text-black hover:bg-gray-200" href="product_details.html">
+            FlexiFit
+           </a>
+           <a class="block px-4 py-2 text-black hover:bg-gray-200" href="product_details2.html">
+            DineMate
+           </a>
+          </div>
+         </div>
+         <a class="text-black font-medium" href="#" onclick="document.getElementById('pricingSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+          Pricing
+         </a>
+         <a class="text-black font-medium" href="#" onclick="document.getElementById('domainsSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+          Our Domains
+         </a>
+         <a class="text-black font-medium" href="#" onclick="document.getElementById('faqSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+          FAQ
+         </a>
+         <a class="text-black font-medium" href="#" onclick="document.getElementById('servicesSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+          Services
+         </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-4">
+         <!-- <a class="text-black font-medium" href="#">
+          Login
+         </a> -->
+         <a class="bg-gray-800 text-white font-medium py-2 px-4 rounded" href="#">
+          Request a demo
+         </a>
+        </div>
+        <div class="md:hidden">
+         <button class="text-black" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fas fa-bars">
+          </i>
+         </button>
+        </div>
+    </nav>
+       <div class="hidden md:hidden" id="mobile-menu">
+        <div class="p-4">
+         <button class="block text-black font-medium py-2 w-full text-left" onclick="document.getElementById('mobile-products').classList.toggle('hidden')">
+          Products
+          <i class="fas fa-chevron-down">
+          </i>
+         </button>
+         <div class="pl-4 hidden" id="mobile-products">
+          <a class="block text-black font-medium py-2" href="#">
+           Product 1
+          </a>
+          <a class="block text-black font-medium py-2" href="#">
+           Product 2
+          </a>
+         </div>
+         <a class="block text-black font-medium py-2" href="#">
+          Pricing
+         </a>
+         <a class="block text-black font-medium py-2" href="#">
+          Our Domains
+         </a>
+         <a class="block text-black font-medium py-2" href="#">
+          FAQ
+         </a>
+         <a class="block text-black font-medium py-2" href="#">
+          Details
+         </a>
+         <a class="block text-black font-medium py-2" href="#">
+          Login
+         </a>
+         <a class="block bg-gray-800 text-white font-medium py-2 px-4 rounded mt-2" href="#">
+          Request a demo
+         </a>
+        </div>
+       </div>
+
+       <script>
+        function toggleDropdown() {
+          const dropdown = document.getElementById('desktop-products');
+          const icon = document.getElementById('dropdown-icon');
+          dropdown.classList.toggle('hidden');
+          if (dropdown.classList.contains('hidden')) {
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+          } else {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+          }
+        }
+       </script>
 
     <!-- Hero -->
 
@@ -150,6 +251,29 @@
             </div>
         </div>
     </div>
+
+    <!-- scroll to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="hidden fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-full">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").classList.remove("hidden");
+            } else {
+                document.getElementById("myBtn").classList.add("hidden");
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document smoothly
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
     <!-- oUR SERVICES -->
     <style>
         /* Styling for the text */
@@ -203,7 +327,7 @@
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
     </style>
-    <div class="text-center py-12">
+    <div class="text-center py-12" id="servicesSection">
         <h1 class="text-heading ">
             Solutions For Every Aspect
         </h1>
@@ -381,7 +505,7 @@
 
     <!-- Pricing -->
 
-    <section class="py-24 ">
+    <section class="py-24 " id="pricingSection">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mb-8">
                 <h2 class="font-manrope text-5xl text-center font-bold text-gray-900 mb-3">Choose your plan </h2>
@@ -630,7 +754,7 @@
 
 
     <!-- Domains -->
-    <div class="mx-20">
+    <div class="mx-20" id="domainsSection"> 
         <div class="text-center py-12">
             <h1 class="text-4xl font-semibold">
                 Our Domains
@@ -1094,7 +1218,7 @@
             /* Ensure no extra margins */
         }
     </style>
-    <section class="py-24">
+    <section class="py-24" id="faqSection">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mb-16">
                 <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
@@ -1111,7 +1235,7 @@
                     <button
                         class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
                         aria-controls="basic-collapse-two-with-icon" aria-expanded="false">
-                        <h5>How do I update my billing information?</h5>
+                        <h5>What services does your company provide?</h5>
                         <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
                             viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
@@ -1127,9 +1251,7 @@
                     <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4 "
                         aria-labelledby="basic-heading-two" style="max-height: 0;">
                         <p class="text-base text-gray-900 font-normal leading-6 pt-4">
-                            To update your billing information, log in to your account, go to the 'Billing' section, and
-                            update your payment details. Save the changes to ensure your billing information is updated.
-                        </p>
+                            We specialize in custom web and mobile application development, SaaS solutions, CRM, ERP, CMS, e-commerce platforms, and other software solutions tailored to your business needs.
                     </div>
                 </div>
                 <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
@@ -1137,7 +1259,7 @@
                     <button
                         class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
                         aria-controls="basic-collapse-two-with-icon" aria-expanded="false">
-                        <h5>How do I update my billing information?</h5>
+                        <h5>Do you offer ready-made software solutions?</h5>
                         <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
                             viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
@@ -1152,8 +1274,7 @@
                     <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4"
                         aria-labelledby="basic-heading-two" style="max-height: 0;">
                         <p class="text-base text-gray-900 font-normal leading-6 pt-4">
-                            To update your billing information, log in to your account, go to the 'Billing' section, and
-                            update your payment details. Save the changes to ensure your billing information is updated.
+                            Yes! We provide both custom-built and pre-developed software solutions, including industry-specific applications such as gym management, e-commerce platforms, and CRM systems.
                         </p>
                     </div>
                 </div>
@@ -1162,7 +1283,7 @@
                     <button
                         class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
                         aria-controls="basic-collapse-three-with-icon" aria-expanded="false">
-                        <h5>How can I contact customer support?</h5>
+                        <h5>What industries do you serve?</h5>
                         <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
                             viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
@@ -1177,9 +1298,7 @@
                     <div id="basic-collapse-three-with-icon" class="accordion-content w-full overflow-hidden pr-4"
                         aria-labelledby="basic-heading-three" style="max-height: 0;">
                         <p class="text-base text-gray-900 font-normal leading-6 pt-4">
-                            To contact customer support, visit the 'Contact Us' page on our website and fill out the
-                            contact
-                            form. You can also reach us via email or phone as provided on the same page.
+                            We cater to various industries, including fitness, healthcare, retail, education, logistics, and more. Our solutions are adaptable to meet diverse business requirements.
                         </p>
                     </div>
                 </div>
@@ -1188,7 +1307,7 @@
                     <button
                         class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
                         aria-controls="basic-collapse-four-with-icon" aria-expanded="false">
-                        <h5>How do I delete my account?</h5>
+                        <h5>How much does a custom software or website cost?</h5>
                         <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
                             viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
@@ -1203,9 +1322,7 @@
                     <div id="basic-collapse-four-with-icon" class="accordion-content w-full overflow-hidden pr-4"
                         aria-labelledby="basic-heading-four" style="max-height: 0;">
                         <p class="text-base text-gray-900 font-normal leading-6 pt-4">
-                            To delete your account, log in to your account, go to the 'Account Settings' section, and
-                            click
-                            on 'Delete Account.' Follow the prompts to confirm the deletion of your account.
+                            The cost depends on factors like complexity, features, design, and integrations. Contact us for a free consultation and quote.
                         </p>
                     </div>
                 </div>
@@ -1214,7 +1331,7 @@
                     <button
                         class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
                         aria-controls="basic-collapse-four-with-icon" aria-expanded="false">
-                        <h5>How do I delete my account?</h5>
+                        <h5>How long does it take to develop a website or software?</h5>
                         <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
                             viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
@@ -1230,13 +1347,150 @@
                     <div id="basic-collapse-four-with-icon" class="accordion-content w-full overflow-hidden pr-4"
                         aria-labelledby="basic-heading-four" style="max-height: 0;">
                         <p class="text-base text-gray-900 font-normal leading-6 pt-4">
-                            To delete your account, log in to your account, go to the 'Account Settings' section, and
-                            click
-                            on 'Delete Account.' Follow the prompts to confirm the deletion of your account.
+                            The timeline varies based on project scope and complexity. A simple website may take 2-4 weeks, while a full-scale application can take several months.
                         </p>
                     </div>
                 </div>
             </div>
+            <div class="accordion-group hidden" id="faqAccordion" data-accordion="default-accordion">
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-two-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-two-with-icon" aria-expanded="false">
+                        <h5>Can you integrate third-party tools and APIs into our software?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4 "
+                        aria-labelledby="basic-heading-two" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Yes! We can integrate payment gateways, analytics tools, CRMs, ERPs, and other third-party services into your software.
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-two-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-two-with-icon" aria-expanded="false">
+                        <h5>Do you provide post-development support and maintenance?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-two" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Yes! We offer ongoing support, bug fixes, feature updates, and maintenance packages based on your needs.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-three-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-three-with-icon" aria-expanded="false">
+                        <h5>Do you offer hosting and domain services?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-three-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-three" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Yes! We assist in domain registration, website hosting, and cloud solutions to ensure seamless performance.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-four-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-four-with-icon" aria-expanded="false">
+                        <h5>How do you ensure the security of my software or website?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-four-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-four" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            We implement industry-standard security measures, including SSL encryption, firewalls, secure authentication, and data protection policies.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white accordion border border-solid border-gray-100 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-four-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-four-with-icon" aria-expanded="false">
+                        <h5>How do I get started with your services?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-four-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-four" style="max-height: 0;">
+                        <p class="text-base text-gray-900 font-normal leading-6 pt-4">
+                            Simply contact us via our website, email, or phone. We will discuss your needs, provide a proposal, and start working on your project.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-gray-800 text-white px-6 py-2 rounded-xl" id="viewAllFaqs">
+                    View All
+                </button>
+            </div>
+            <script>
+                document.getElementById('viewAllFaqs').addEventListener('click', function () {
+                    const faqAccordion = document.getElementById('faqAccordion');
+                    faqAccordion.classList.toggle('hidden');
+                    if (faqAccordion.classList.contains('hidden')) {
+                        this.textContent = 'View All';
+                    } else {
+                        this.textContent = 'Hide';
+                    }
+                });
+            </script>
         </div>
     </section>
 
