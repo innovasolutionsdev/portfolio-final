@@ -61,10 +61,10 @@
     <nav class="flex items-center justify-between p-4">
         <div class="flex items-center cursor-pointer" onclick="window.location.href='index.html'">
             <img alt="Company logo" class="h-10 w-10" height="50"
-            src="https://storage.googleapis.com/a1aa/image/JDaeePfYopO19Ibb8uBdg3UAxgW9g95BOlZ4DHR67Bf7MKkPB.jpg"
-            width="50" />
+                src="https://storage.googleapis.com/a1aa/image/JDaeePfYopO19Ibb8uBdg3UAxgW9g95BOlZ4DHR67Bf7MKkPB.jpg"
+                width="50" />
             <span class="ml-2 text-xl font-bold text-gray-900">
-            SOLARA
+                SOLARA
             </span>
         </div>
         <div class="flex items-center space-x-6">
@@ -754,26 +754,24 @@
             }
         }
     </style>
+    <!-- First, I'm giving each slideshow a unique ID -->
     <div class="text-center py-12" id="productsSection">
         <h1 class="text-heading ">
             <h1 class="text-4xl font-semibold">
                 Our Products
             </h1>
-        <p class="text-lg text-gray-600 mt-4">
-            Empowering your business with cutting-edge systems designed to .
-        
-            All-In-One Business Software</p>
-        <!-- <p class="text-xl mt-4" style="color: #707C8C;">
-            Boost productivity using our WhatsApp-first ERP software for small businesses
-           
-        </p> -->
+            <p class="text-lg text-gray-600 mt-4">
+                Empowering your business with cutting-edge systems designed to.
+
+                All-In-One Business Software</p>
     </div>
     <div class="flex items-center justify-center">
         <div class="flex flex-col gap-6 w-full max-w-6xl px-4">
             <!-- Flexifit -->
             <div class="bg-white rounded-lg shadow-lg p-6 w-full ">
                 <div class="flex flex-col md:flex-row gap-4 md:gap-16">
-                    <div class="slideshow-container relative" id="slideshow-basic">
+                    <!-- Changed the ID to be unique: slideshow-gym -->
+                    <div class="slideshow-container relative" id="slideshow-gym">
                         <div class="slideshow-slide active">
                             <img alt="Screenshot of the Basic plan dashboard" height="150"
                                 src="https://storage.googleapis.com/a1aa/image/KBpUTMlqJJ4tLBCgwhSSn6tBcPOO8enzz4SpgLU1ip6Zij8JA.jpg"
@@ -789,18 +787,19 @@
                                 src="https://storage.googleapis.com/a1aa/image/8qDZWUGNh442BJH6LynfSWYVA75A0PyBRz58TNHKZvmaij8JA.jpg"
                                 width="200" />
                         </div>
+                        <!-- Updated the onclick with the correct ID -->
                         <button
                             class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
-                            onclick="plusSlides(-1, 'slideshow-basic')">&#10094;</button>
+                            onclick="plusSlides(-1, 'slideshow-gym')">&#10094;</button>
                         <button
                             class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
-                            onclick="plusSlides(1, 'slideshow-basic')">&#10095;</button>
+                            onclick="plusSlides(1, 'slideshow-gym')">&#10095;</button>
                     </div>
                     <div class="text-center">
                         <h2 class="font-bold text-xl md:mb-6">Comprehensive Gym Management System</h2>
                         <div class="flex flex-col md:flex-row gap-16">
-
-                            <ul class="space-y-4 features-list" id="features-basic">
+                            <!-- Updated the features IDs to be unique -->
+                            <ul class="space-y-4 features-list" id="features-gym">
                                 <li class="flex items-center text-gray-700">
                                     <i class="fas fa-check-circle text-gray-900 mr-2">
                                     </i>
@@ -822,7 +821,7 @@
                                     Workout Management
                                 </li>
                             </ul>
-                            <ul class="space-y-4 features-list" id="features-basic">
+                            <ul class="space-y-4 features-list" id="features-gym-2">
                                 <li class="flex items-center text-gray-700">
                                     <i class="fas fa-check-circle text-gray-900 mr-2">
                                     </i>
@@ -844,21 +843,11 @@
                                     Mobile Application
                                 </li>
                             </ul>
+                            <!-- Updated the toggleFeatures argument -->
                             <button class="view-features-btn mt-6 bg-gray-900 text-white py-2 px-4 rounded-lg"
-                                onclick="toggleFeatures('basic', this)">
+                                onclick="toggleFeatures('gym', this)">
                                 View Features
                             </button>
-                            <!-- <div class="flex flex-col justify-center items-center">
-                                                <div class="text-sm font-semi text-purple-600 mt-4">
-                                                    Starting From Just
-                                                </div>
-                                                <div class="text-4xl font-bold text-purple-600 mt-4">
-                                                    $80
-                                                </div>
-                                                <button class="mt-6 bg-purple-600 text-white py-2 px-4 rounded-lg">
-                                                    Buy Now
-                                                </button>
-                                            </div> -->
                         </div>
                     </div>
                     <div class="flex flex-col md:flex-col gap-6justify-center items-center">
@@ -872,13 +861,13 @@
                             Buy Now
                         </button>
                     </div>
-
                 </div>
             </div>
             <!-- DineMate -->
             <div class="bg-white rounded-lg shadow-lg p-6 w-full mb-6">
                 <div class="flex flex-col md:flex-row gap-4 md:gap-16">
-                    <div class="slideshow-container relative" id="slideshow-basic">
+                    <!-- Changed the ID to be unique: slideshow-restaurant -->
+                    <div class="slideshow-container relative" id="slideshow-restaurant">
                         <div class="slideshow-slide active">
                             <img alt="Screenshot of the Basic plan dashboard" height="150"
                                 src="https://storage.googleapis.com/a1aa/image/KBpUTMlqJJ4tLBCgwhSSn6tBcPOO8enzz4SpgLU1ip6Zij8JA.jpg"
@@ -894,18 +883,19 @@
                                 src="https://storage.googleapis.com/a1aa/image/8qDZWUGNh442BJH6LynfSWYVA75A0PyBRz58TNHKZvmaij8JA.jpg"
                                 width="200" />
                         </div>
+                        <!-- Updated the onclick with the correct ID -->
                         <button
                             class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
-                            onclick="plusSlides(-1, 'slideshow-basic')">&#10094;</button>
+                            onclick="plusSlides(-1, 'slideshow-restaurant')">&#10094;</button>
                         <button
                             class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1"
-                            onclick="plusSlides(1, 'slideshow-basic')">&#10095;</button>
+                            onclick="plusSlides(1, 'slideshow-restaurant')">&#10095;</button>
                     </div>
                     <div class="text-center">
-                        <h2 class="font-bold text-xl  md:mb-6">Comprehensive Restaurant Management System</h2>
+                        <h2 class="font-bold text-xl md:mb-6">Comprehensive Restaurant Management System</h2>
                         <div class="flex flex-col md:flex-row gap-16">
-
-                            <ul class="space-y-4 features-list" id="features-basic">
+                            <!-- Updated the features IDs to be unique -->
+                            <ul class="space-y-4 features-list" id="features-restaurant">
                                 <li class="flex items-center text-gray-700">
                                     <i class="fas fa-check-circle text-gray-900 mr-2">
                                     </i>
@@ -927,7 +917,7 @@
                                     Online table reservation
                                 </li>
                             </ul>
-                            <ul class="space-y-4 features-list" id="features-basic">
+                            <ul class="space-y-4 features-list" id="features-restaurant-2">
                                 <li class="flex items-center text-gray-700">
                                     <i class="fas fa-check-circle text-gray-900 mr-2">
                                     </i>
@@ -949,21 +939,11 @@
                                     Mobile Application
                                 </li>
                             </ul>
+                            <!-- Updated the toggleFeatures argument -->
                             <button class="view-features-btn mt-6 bg-purple-600 text-white py-2 px-4 rounded-lg"
-                                onclick="toggleFeatures('basic', this)">
+                                onclick="toggleFeatures('restaurant', this)">
                                 View Features
                             </button>
-                            <!-- <div class="flex flex-col justify-center items-center">
-                                <div class="text-sm font-semi text-purple-600 mt-4">
-                                    Starting From Just
-                                </div>
-                                <div class="text-4xl font-bold text-purple-600 mt-4">
-                                    $80
-                                </div>
-                                <button class="mt-6 bg-purple-600 text-white py-2 px-4 rounded-lg">
-                                    Buy Now
-                                </button>
-                            </div> -->
                         </div>
                     </div>
                     <div class="flex flex-col md:flex-col gap-6justify-center items-center">
@@ -977,15 +957,20 @@
                             Buy Now
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
         <script>
+            // Fixed the function to properly select slides
             function plusSlides(n, slideshowId) {
+                // Fixed the selector syntax
                 let slides = document.querySelectorAll(`#${slideshowId} .slideshow-slide`);
-                let activeIndex = Array.from(slides).findIndex(slide => slide.style.display === "block");
-                slides[activeIndex].style.display = "none";
+                let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+                // Remove active class from current slide
+                slides[activeIndex].classList.remove('active');
+
+                // Calculate new index
                 let newIndex = activeIndex + n;
                 if (newIndex >= slides.length) {
                     newIndex = 0;
@@ -993,22 +978,22 @@
                 if (newIndex < 0) {
                     newIndex = slides.length - 1;
                 }
-                slides[newIndex].style.display = "block";
+
+                // Add active class to new slide
+                slides[newIndex].classList.add('active');
             }
 
-            document.querySelectorAll('.slideshow-container').forEach(container => {
-                container.querySelector('.slideshow-slide').style.display = 'block';
-            });
-
+            // Fixed the toggleFeatures function to properly handle different feature sets
             function toggleFeatures(plan, button) {
-                const featuresList = document.querySelectorAll(`#features-${plan}`);
+                // Fixed the selector syntax
+                const featuresList = document.querySelectorAll(`#features-${plan}, #features-${plan}-2`);
                 featuresList.forEach(list => {
-                    if (list.style.display === "none" || list.style.display === "") {
+                    if (list.style.display === "none" || getComputedStyle(list).display === "none") {
                         list.style.display = "block";
                         button.textContent = "Hide Features";
                     } else {
                         list.style.display = "none";
-                        button.textContent = "View All Features";
+                        button.textContent = "View Features";
                     }
                 });
             }
@@ -1292,83 +1277,204 @@
         </div>
     </div>
 
+
+
+    <div id="hourlyRatesSection" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Hourly Rates</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Transparent pricing for all your project needs. Rates may vary based on project complexity and
+                    timeline.
+                </p>
+            </div>
+
+            <!-- Simple Rates Cards -->
+            <div class="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
+                <!-- Standard Rate -->
+                <div class="bg-white rounded-xl shadow-md p-8 w-full md:w-64 text-center">
+                    <div class="text-6xl font-bold mb-2">$90</div>
+                    <div class="text-xl text-gray-800 mb-4">Standard Rate</div>
+                    <p class="text-gray-600">For most web projects and general development work</p>
+                </div>
+
+                <!-- Design Rate -->
+                <div class="bg-white rounded-xl shadow-md p-8 w-full md:w-64 text-center">
+                    <div class="text-6xl font-bold mb-2">$80</div>
+                    <div class="text-xl text-gray-800 mb-4">Design Rate</div>
+                    <p class="text-gray-600">For UI/UX design work and interface development</p>
+                </div>
+
+                <!-- Complex Projects -->
+                <div class="bg-white rounded-xl shadow-md p-8 w-full md:w-64 text-center">
+                    <div class="text-6xl font-bold mb-2">$120</div>
+                    <div class="text-xl text-gray-800 mb-4">Complex Rate</div>
+                    <p class="text-gray-600">For specialized development and advanced functionality</p>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="mt-12 bg-white rounded-xl shadow-md p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-center">Additional Information</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <h4 class="font-bold mb-2 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            Discounts Available
+                        </h4>
+                        <p class="text-gray-600">10-15% discount for projects over 40 hours. Ask about our retainer
+                            options for ongoing work.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-2 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Project-Based Pricing
+                        </h4>
+                        <p class="text-gray-600">Fixed price quotes available for well-defined projects with clear
+                            requirements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-12 text-center">
+                <button
+                    class="px-8 py-3 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-colors duration-300">
+                    Get a Custom Quote
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact us -->
-    <div class=" pb-6 pt-2 mt-16" id="contactUsSection">
-        <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
+    <!-- Contact us with AJAX Formspree Integration -->
+    <div class="pb-6 pt-2 mt-16" id="contactUsSection">
+        <h2 class="main-heading text-center font-bold leading-[3.25rem]">
             All-In-One Business Software
         </h2>
-        <p class="sub-heading mt-4 text-center text-purple-600">
+        <p class="sub-heading mt-4 text-center text-gray-600">
             Empowering your business with cutting-edge systems designed to streamline operations
         </p>
     </div>
-    <div class=" flex justify-center items-center pb-6 ">
-
+    <div class="flex justify-center items-center pb-6">
         <div class="container mx-auto p-4">
+            <!-- Success message container (initially hidden) -->
+            <div id="successMessage"
+                class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6 relative"
+                role="alert">
+                <strong class="font-bold">Success!</strong>
+                <span class="block sm:inline">Your message has been sent successfully. We'll get back to you
+                    soon.</span>
+                <span class="absolute top-0 bottom-0 right-0 px-4 py-3"
+                    onclick="document.getElementById('successMessage').classList.add('hidden')">
+                    <svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <title>Close</title>
+                        <path
+                            d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                    </svg>
+                </span>
+            </div>
+
+            <!-- Error message container (initially hidden) -->
+            <div id="errorMessage"
+                class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6 relative"
+                role="alert">
+                <strong class="font-bold">Error!</strong>
+                <span class="block sm:inline">There was a problem submitting your form. Please try again.</span>
+                <span class="absolute top-0 bottom-0 right-0 px-4 py-3"
+                    onclick="document.getElementById('errorMessage').classList.add('hidden')">
+                    <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <title>Close</title>
+                        <path
+                            d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                    </svg>
+                </span>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Left Side: Contact Form -->
-                <div class="bg-white p-6 rounded-2xl border border-gray-100">
-                    <form class="space-y-4">
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <!-- Form using Formspree with AJAX -->
+                    <form id="contactForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-3 top-3 text-gray-400"></i>
+                                <input type="text" name="name" id="name" placeholder="Name" required
+                                    class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full focus:ring-gray-500 focus:border-gray-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-phone-alt absolute left-3 top-3 text-gray-400"></i>
+                                <input type="tel" name="phone" id="phone" placeholder="Phone Number" required
+                                    class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full focus:ring-gray-500 focus:border-gray-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-building absolute left-3 top-3 text-gray-400"></i>
+                                <input type="text" name="business" id="business" placeholder="Business Name" required
+                                    class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full focus:ring-gray-500 focus:border-gray-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-industry absolute left-3 top-3 text-gray-400"></i>
+                                <input type="text" name="industry" id="industry" placeholder="Industry/Type of Business"
+                                    required
+                                    class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full focus:ring-gray-500 focus:border-gray-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-map-marker-alt absolute left-3 top-3 text-gray-400"></i>
+                                <input type="email" name="email" id="email" placeholder="E-mail address" required
+                                    class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full focus:ring-gray-500 focus:border-gray-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-globe absolute left-3 top-3 text-gray-400"></i>
+                                <input type="url" name="website" id="website" placeholder="Website URL (Optional)"
+                                    class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full focus:ring-gray-500 focus:border-gray-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="relative">
+                                <i class="fas fa-dollar-sign absolute left-3 top-3 text-gray-400"></i>
+                                <input type="text" name="budget" id="budget" placeholder="Budget" required
+                                    class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full focus:ring-gray-500 focus:border-gray-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-calendar-alt absolute left-3 top-3 text-gray-400"></i>
+                                <input type="text" name="timeline" id="timeline" placeholder="Expected Delivery Time"
+                                    required
+                                    class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full focus:ring-gray-500 focus:border-gray-500">
+                            </div>
+                        </div>
+                        <textarea name="notes" id="notes" placeholder="Additional Notes or Requirements"
+                            class="w-full p-4 border border-gray-300 rounded-lg h-30 focus:ring-gray-500 focus:border-gray-500"></textarea>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="relative">
-                                <i class="fas fa-user absolute left-3 top-3 text-purple-400"></i>
-                                <input type="text" placeholder="Name"
-                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
-                            </div>
-                            <div class="relative">
-                                <i class="fas fa-phone-alt absolute left-3 top-3 text-purple-400"></i>
-                                <input type="text" placeholder="Phone Number"
-                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="relative">
-                                <i class="fas fa-building absolute left-3 top-3 text-purple-400"></i>
-                                <input type="text" placeholder="Business Name"
-                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
-                            </div>
-                            <div class="relative">
-                                <i class="fas fa-industry absolute left-3 top-3 text-purple-400"></i>
-                                <input type="text" placeholder="Industry/Type of Business"
-                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="relative">
-                                <i class="fas fa-map-marker-alt absolute left-3 top-3 text-purple-400"></i>
-                                <input type="text" placeholder="E-mail address"
-                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
-                            </div>
-                            <div class="relative">
-                                <i class="fas fa-globe absolute left-3 top-3 text-purple-400"></i>
-                                <input type="text" placeholder="Website URL (Optional)"
-                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="relative">
-                                <i class="fas fa-dollar-sign absolute left-3 top-3 text-purple-400"></i>
-                                <input type="text" placeholder="Budget"
-                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
-                            </div>
-                            <div class="relative">
-                                <i class="fas fa-calendar-alt absolute left-3 top-3 text-purple-400"></i>
-                                <input type="text" placeholder="Expected Delivery Time"
-                                    class="pl-10 pr-4 py-2 border border-purple-300 rounded-lg w-full focus:ring-purple-500 focus:border-purple-500">
-                            </div>
-                        </div>
-                        <textarea placeholder="Additional Notes or Requirements"
-                            class="w-full p-4 border border-purple-300 rounded-lg h-30 focus:ring-purple-500 focus:border-purple-500"></textarea>
+                        <!-- Anti-spam honeypot field -->
+                        <input type="text" name="_gotcha" style="display:none">
 
-                        <button
-                            class="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-full w-full md:w-auto">Send
+                        <button type="submit" id="submitButton"
+                            class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded-full w-full md:w-auto">Send
                             Request</button>
                     </form>
                 </div>
-                <!-- Right Side: Cards -->
+
+                <!-- Right Side: Cards content remains the same -->
                 <div class="space-y-4">
                     <!-- Next Steps Card -->
-                    <div class="bg-white p-6 rounded-2xl flex flex-col items-center shadow-md border border-gray-100">
+                    <div class="bg-white p-6 rounded-2xl flex flex-col items-center shadow-md border border-gray-200">
                         <div class="text-3xl font-bold mb-4">Next Steps</div>
                         <div class="text-lg mb-4">Here's what happens after you make a request </div>
                         <ul class="list-disc list-inside text-left">
@@ -1380,13 +1486,13 @@
                         </ul>
                     </div>
                     <!-- Chat With Our Team Card -->
-                    <div class="bg-gray-200 text-black p-6 rounded-2xl flex flex-col shadow-md items-center">
+                    <div class="bg-gray-100 text-black p-6 rounded-2xl flex flex-col shadow-md items-center">
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-envelope text-2xl text-purple-700"></i>
+                            <i class="fas fa-envelope text-2xl text-gray-700"></i>
                             <span class="ml-2">Chat With Our Team</span>
                         </div>
                         <div class="text-xl font-bold mb-4">email@pagedone.com</div>
-                        <button class="bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded-full">Contact
+                        <button class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded-full">Contact
                             Us</button>
                     </div>
                 </div>
@@ -1394,111 +1500,174 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            const submitButton = document.getElementById('submitButton');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Ensure messages are hidden initially
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent the default form submission
+
+                // Disable submit button and show loading state
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+
+                // Collect form data
+                const formData = new FormData(contactForm);
+
+                // Send to Formspree using fetch API
+                fetch('https://formspree.io/f/maneyzyy', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    })
+                    .then(data => {
+                        // Show success message
+                        successMessage.classList.remove('hidden');
+
+                        // Scroll to the top of the form to see the success message
+                        window.scrollTo({
+                            top: successMessage.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+
+                        // Reset the form
+                        contactForm.reset();
+
+                        // Reset button
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send Request';
+                    })
+                    .catch(error => {
+                        // Show error message
+                        errorMessage.classList.remove('hidden');
+
+                        // Scroll to the top of the form to see the error message
+                        window.scrollTo({
+                            top: errorMessage.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+
+                        // Reset button
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send Request';
+
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    </script>
 
     <!-- Footer -->
 
     <footer class="w-full">
-        <div class="mx-0 px-4 bg-purple-50 w-full">
+        <div class="mx-0 px-4 bg-gray-50 w-full">
             <div class="flex justify-center items-center h-full w-full py-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-purple-800 text-center">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-gray-800 text-center">
                     <div>
-                        <h3 class="font-bold text-purple-900 mb-4">
+                        <h3 class="font-bold text-gray-900 mb-4">
                             Product
                         </h3>
                         <ul>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
-                                    Features
+                                <a class="hover:text-gray-600 hover:underline" href="product_details.html">
+                                    Flexifit
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
-                                    Why Draftbit
+                                <a class="hover:text-gray-600 hover:underline" href="product_details2.html">
+                                    DineMate
                                 </a>
                             </li>
-                            <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
-                                    Pricing
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
-                                    Experts
-                                </a>
-                            </li>
+
                         </ul>
                     </div>
                     <div>
-                        <h3 class="font-bold text-purple-900 mb-4">
+                        <h3 class="font-bold text-gray-900 mb-4">
                             Quick Links
                         </h3>
                         <ul>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Products
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Pricing
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Our Domains
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Our Service
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     FAQ
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="font-bold text-purple-900 mb-4">
+                        <h3 class="font-bold text-gray-900 mb-4">
                             Support
                         </h3>
                         <ul>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Community
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Resources
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Docs
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Affiliates
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="font-bold text-purple-900 mb-4">
+                        <h3 class="font-bold text-gray-900 mb-4">
                             Get started
                         </h3>
                         <ul>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Create Account
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a class="hover:text-purple-600 hover:underline" href="#">
+                                <a class="hover:text-gray-600 hover:underline" href="#">
                                     Sign In
                                 </a>
                             </li>
@@ -1508,37 +1677,38 @@
             </div>
         </div>
 
-        <div class="h-[120px] flex justify-between items-top p-3 bg-purple-100">
+        <div class="h-[120px] flex justify-between items-top p-3 bg-gray-100">
             <div class="flex space-x-4 pt-8">
-                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
-                    <i class="fab fa-twitter text-purple-700 icon-hover"></i>
+                <a class="bg-gray-200 p-2 rounded-full h-fit hover:bg-gray-300 transition-colors duration-300" href="#">
+                    <i class="fab fa-twitter text-gray-700 hover:text-[#1DA1F2] transition-colors duration-300"></i>
                 </a>
-                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
-                    <i class="fab fa-linkedin-in text-purple-700 icon-hover"></i>
+                <a class="bg-gray-200 p-2 rounded-full h-fit hover:bg-gray-300 transition-colors duration-300" href="#">
+                    <i class="fab fa-linkedin-in text-gray-700 hover:text-[#0A66C2] transition-colors duration-300"></i>
                 </a>
-                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
-                    <i class="fab fa-youtube text-purple-700 icon-hover"></i>
+                <a class="bg-gray-200 p-2 rounded-full h-fit hover:bg-gray-300 transition-colors duration-300" href="#">
+                    <i class="fab fa-youtube text-gray-700 hover:text-[#FF0000] transition-colors duration-300"></i>
                 </a>
-                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
-                    <i class="fab fa-instagram text-purple-700 icon-hover"></i>
+                <a class="bg-gray-200 p-2 rounded-full h-fit hover:bg-gray-300 transition-colors duration-300" href="#">
+                    <i class="fab fa-instagram text-gray-700 hover:text-[#E4405F] transition-colors duration-300"></i>
                 </a>
-                <a class="bg-purple-200 p-2 rounded-full h-fit hover:bg-purple-300" href="#">
-                    <i class="fab fa-tiktok text-purple-700 icon-hover"></i>
+                <a class="bg-gray-200 p-2 rounded-full h-fit hover:bg-gray-300 transition-colors duration-300" href="#">
+                    <i class="fab fa-tiktok text-gray-700 hover:text-black transition-colors duration-300"></i>
                 </a>
-                <a class="text-purple-800 hover:text-purple-600" href="#">Loom Terms & Policies</a>
+                <a class="text-gray-800 hover:text-gray-600 transition-colors duration-300" href="#">Loom Terms &
+                    Policies</a>
             </div>
             <div class="text-right pt-8">
                 <div class="flex items-center space-x-2 justify-end">
-                    <img src="https://placehold.co/20x20" alt="Atlassian logo" class="h-5">
-                    <span class="text-purple-900 font-bold">ATLASSIAN</span>
+                    <img src="https://storage.googleapis.com/a1aa/image/JDaeePfYopO19Ibb8uBdg3UAxgW9g95BOlZ4DHR67Bf7MKkPB.jpg"
+                        alt="Atlassian logo" class="h-5">
+                    <span class="text-gray-900 font-bold">SOLARA</span>
                 </div>
-                <div class="text-purple-700 text-sm">
+                <div class="text-gray-700 text-sm">
                     © 2024, Loom, Inc. All Rights Reserved.
                 </div>
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
