@@ -454,97 +454,195 @@
         </p>
     </div>
 
+    <style>
+        @media (max-width: 767px) {
+  #desktopprice {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #mobileprice {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+}
+    </style>
+
 
     <div class="flex items-center justify-center min-h-screen">
-        <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8">
-            <!-- Free Plan -->
-            <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4 mt-8">
-                <h2 class="text-xl font-semibold mb-4">Standard</h2>
-                <div class="text-3xl font-bold mb-6">Rs 12,500 <span class="text-lg font-normal text-gray-500">month</span></div>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Mobile Application</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Content Management</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Advanced Analytics</li>
-                </ul>
-                <div class="flex justify-center">
-                    <button class="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black hover:shadow-lg transition duration-300"
-                        onclick="redirectToWhatsApp('Standard', 'Rs 12,500')">Purchase Plan</button>
+        <div class="w-full px-4 md:px-0 ">
+            <!-- Mobile: Horizontal Scroll Container (hidden on desktop) -->
+            <div class="md:hidden overflow-x-auto pb-4" style="display: block;" id="mobileprice">
+                <div class="flex space-x-4 w-max px-4">
+                    <!-- Standard Plan (Mobile) -->
+                    <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-64 flex-shrink-0">
+                        <h2 class="text-xl font-semibold mb-4">Standard</h2>
+                        <div class="text-3xl font-bold mb-6">Rs 12,500 <span class="text-lg font-normal text-gray-500">month</span></div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Mobile Application</li>
+                        </ul>
+                        <button class="w-full bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black transition duration-300"
+                            onclick="redirectToWhatsApp('Standard', 'Rs 12,500')">Purchase Plan</button>
+                    </div>
+    
+                    <!-- Premium Plan (Mobile) -->
+                    <div class="bg-gray-300 rounded-2xl shadow-lg p-6 w-64 flex-shrink-0 relative">
+                        <div class="absolute top-0 left-0 right-0 bg-gray-800 text-white text-center py-2 rounded-t-2xl">MOST POPULAR</div>
+                        <h2 class="text-xl font-semibold mb-4 mt-8">Premium</h2>
+                        <div class="text-3xl font-bold">Rs 15,500<span class="text-sm font-normal text-gray-500 ml-2">month.</span></div>
+                        <p class="text-sm mb-6 mt-2 text-gray-600">You get free Rs.4800 implementation!</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                        </ul>
+                        <button class="w-full bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black transition duration-300"
+                            onclick="redirectToWhatsApp('Premium', 'Rs 15,500')">Purchase Plan</button>
+                    </div>
+    
+                    <!-- 1 Year Plan (Mobile) -->
+                    <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-64 flex-shrink-0">
+                        <h2 class="text-xl font-semibold mb-4">1 Year</h2>
+                        <div class="text-3xl font-bold mb-6">Rs 150,000 <span class="text-sm font-normal text-gray-500">year.<br>You save Rs.36,000!</span></div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                        </ul>
+                        <button class="w-full bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black transition duration-300"
+                            onclick="redirectToWhatsApp('1 Year', 'Rs 150,000')">Purchase Plan</button>
+                    </div>
+    
+                    <!-- 5 Years Plan (Mobile) -->
+                    <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-64 flex-shrink-0">
+                        <h2 class="text-xl font-semibold mb-4">5 Years</h2>
+                        <div class="text-3xl font-bold">Rs 645,000 <span class="text-sm text-gray-500"></span></div>
+                        <p class="text-sm mb-6 mt-2 text-gray-500">You save Rs.105,000!</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                        </ul>
+                        <button class="w-full bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black transition duration-300"
+                            onclick="redirectToWhatsApp('5 Years', 'Rs 645,000')">Purchase Plan</button>
+                    </div>
                 </div>
             </div>
-
-            <div class="bg-gray-300 rounded-2xl shadow-lg p-6 w-full md:w-1/4 relative mb-4">
-                <div class="absolute top-0 left-0 right-0 bg-gray-800 text-white text-center py-2 rounded-t-2xl">MOST POPULAR</div>
-                <h2 class="text-xl font-semibold mb-4 mt-8">Premium</h2>
-                <div class="text-3xl font-bold">Rs 15,500<span class="text-sm font-normal text-gray-500 ml-2">month.</span></div>
-                <p class="text-sm mb-6 mt-2 text-gray-600">You get free Rs.4800 implementation!</p>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
-                </ul>
-                <div class="flex justify-center">
-                    <button class="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black hover:shadow-lg transition duration-300"
-                        onclick="redirectToWhatsApp('Premium', 'Rs 15,500')">Purchase Plan</button>
+    
+            <!-- Desktop: Regular Grid Layout (hidden on mobile) -->
+            <div class="md:flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8 px-4" id="desktopprice">
+                <!-- Standard Plan (Desktop) -->
+                <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4">
+                    <h2 class="text-xl font-semibold mb-4">Standard</h2>
+                    <div class="text-3xl font-bold mb-6">Rs 12,500 <span class="text-lg font-normal text-gray-500">month</span></div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Mobile Application</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Content Management</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Advanced Analytics</li>
+                    </ul>
+                    <div class="flex justify-center">
+                        <button class="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black hover:shadow-lg transition duration-300"
+                            onclick="redirectToWhatsApp('Standard', 'Rs 12,500')">Purchase Plan</button>
+                    </div>
+                </div>
+    
+                <!-- Premium Plan (Desktop) -->
+                <div class="bg-gray-300 rounded-2xl shadow-lg p-6 w-full md:w-1/4 relative">
+                    <div class="absolute top-0 left-0 right-0 bg-gray-800 text-white text-center py-2 rounded-t-2xl">MOST POPULAR</div>
+                    <h2 class="text-xl font-semibold mb-4 mt-8">Premium</h2>
+                    <div class="text-3xl font-bold">Rs 15,500<span class="text-sm font-normal text-gray-500 ml-2">month.</span></div>
+                    <p class="text-sm mb-6 mt-2 text-gray-600">You get free Rs.4800 implementation!</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                    </ul>
+                    <div class="flex justify-center">
+                        <button class="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black hover:shadow-lg transition duration-300"
+                            onclick="redirectToWhatsApp('Premium', 'Rs 15,500')">Purchase Plan</button>
+                    </div>
+                </div>
+    
+                <!-- 1 Year Plan (Desktop) -->
+                <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4">
+                    <h2 class="text-xl font-semibold mb-4">1 Year</h2>
+                    <div class="text-3xl font-bold mb-6">Rs 150,000 <span class="text-sm font-normal text-gray-500">year.<br>You save Rs.36,000!</span></div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                    </ul>
+                    <div class="flex justify-center">
+                        <button class="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black hover:shadow-lg transition duration-300"
+                            onclick="redirectToWhatsApp('1 Year', 'Rs 150,000')">Purchase Plan</button>
+                    </div>
+                </div>
+    
+                <!-- 5 Years Plan (Desktop) -->
+                <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4">
+                    <h2 class="text-xl font-semibold mb-4">5 Years</h2>
+                    <div class="text-3xl font-bold">Rs 645,000 <span class="text-sm text-gray-500"></span></div>
+                    <p class="text-sm mb-6 mt-2 text-gray-500">You save Rs.105,000!</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
+                    </ul>
+                    <div class="flex justify-center">
+                        <button class="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black hover:shadow-lg transition duration-300"
+                            onclick="redirectToWhatsApp('5 Years', 'Rs 645,000')">Purchase Plan</button>
+                    </div>
                 </div>
             </div>
-
-            <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4 mt-8">
-                <h2 class="text-xl font-semibold mb-4">1 Year</h2>
-                <div class="text-3xl font-bold mb-6">Rs 150,000 <span class="text-sm font-normal text-gray-500">year.<br>You save Rs.36,000!</span></div>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
-                </ul>
-                <div class="flex justify-center">
-                    <button class="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black hover:shadow-lg transition duration-300"
-                        onclick="redirectToWhatsApp('1 Year', 'Rs 150,000')">Purchase Plan</button>
-                </div>
-            </div>
-
-            <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4 mt-8">
-                <h2 class="text-xl font-semibold mb-4">5 Years</h2>
-                <div class="text-3xl font-bold">Rs 645,000 <span class="text-sm text-gray-500"></span></div>
-                <p class="text-sm mb-6 mt-2 text-gray-500">You save Rs.105,000!</p>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notification</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce</li>
-                </ul>
-                <div class="flex justify-center">
-                    <button class="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black hover:shadow-lg transition duration-300"
-                        onclick="redirectToWhatsApp('5 Years', 'Rs 645,000')">Purchase Plan</button>
-                </div>
-            </div>
-
-            <script>
-                function redirectToWhatsApp(planName, price) {
-                    const phoneNumber = '+94722701880'; // Replace with the desired WhatsApp number including country code
-                    const message = `Hello, I am interested in purchasing the FlexiFit ${planName} plan priced at ${price}. Please provide more details.`;
-                    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                    window.open(url, '_blank');
-                }
-            </script>
         </div>
     </div>
+    
+    <script>
+        function redirectToWhatsApp(planName, price) {
+            const phoneNumber = '+94722701880';
+            const message = `Hello, I am interested in purchasing the FlexiFit ${planName} plan priced at ${price}. Please provide more details.`;
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
 
     <!-- Why choose us -->
 
