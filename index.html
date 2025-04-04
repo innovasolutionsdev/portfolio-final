@@ -116,11 +116,11 @@
 
     <nav class="flex items-center justify-between p-4 bg-white shadow">
         <div class="flex items-center cursor-pointer" onclick="window.location.href='index.html'">
-            <img alt="Company logo" class="h-8 w-8 mr-2" height="30"
+            <!-- <img alt="Company logo" class="h-8 w-8 mr-2" height="30"
                 src="https://storage.googleapis.com/a1aa/image/TZhK-NPFAq9cnnNiDKBpO0N-yNNesc8kANnTygT9kbM.jpg"
-                width="30" />
+                width="30" /> -->
             <span class="font-bold text-lg text-black">
-                SOLARA
+                INNOVASOLUTIONS
             </span>
         </div>
         <div class="hidden md:flex items-center space-x-6">
@@ -134,7 +134,7 @@
                     <a class="block px-4 py-2 text-black hover:bg-gray-200" href="product_details.html">
                         FlexiFit
                     </a>
-                    <a class="block px-4 py-2 text-black hover:bg-gray-200" href="product_details2.html">
+                    <a class="block px-4 py-2 text-black hover:bg-gray-200" href="">
                         DineMate
                     </a>
                 </div>
@@ -160,7 +160,8 @@
             <!-- <a class="text-black font-medium" href="#">
           Login
          </a> -->
-            <a class="bg-gray-800 text-white font-medium py-2 px-4 rounded" href="#">
+            <a class="bg-gray-800 text-white font-medium py-2 px-4 rounded" href="#"
+                onclick="document.getElementById('contactUsSection').scrollIntoView({ behavior: 'smooth' });">
                 Request a demo
             </a>
         </div>
@@ -203,10 +204,9 @@
                 onclick="document.getElementById('servicesSection').scrollIntoView({ behavior: 'smooth' }); return false;">
                 Services
             </a>
-            <a class="block text-black font-medium py-2" href="#">
-                Login
-            </a>
-            <a class="block bg-gray-800 text-white font-medium py-2 px-4 rounded mt-2" href="#">
+
+            <a class="block bg-gray-800 text-white font-medium py-2 px-4 rounded mt-2" href="#"
+                onclick="document.getElementById('contactUsSection').scrollIntoView({ behavior: 'smooth' });">
                 Request a demo
             </a>
         </div>
@@ -244,11 +244,13 @@
     </style>
 
     <!-- Wrap the hero section in a container -->
-    <div class="hero-container flex items-center justify-center mt-8 md:mt-16 md:pt-16 mb-12">
+    <div class="hero-container flex items-center justify-center mt-10 md:mt-18 md:pt-18 mb-12">
         <div class="text-center ">
-            <h1 id="herohead" class="font-black text-gray-900 leading-tight"
-                style="font-family: 'Inter', 'Inter Placeholder', sans-serif;  font-weight: 1000;">
-                Platforms To Make <br>Your Life Easy</h1>
+            <h1 id="herohead" class="font-black text-gray-900 leading-tight pt-6 md:pt-12"
+                style="font-family: 'Inter', 'Inter Placeholder', sans-serif; font-weight: 1000;">
+                Platforms To Make <br>Your Life Easy
+            </h1>
+
             <p class="text-gray-500 text-lg md:text-xl mt-6 px-4 md:px-1">
                 Simplify your operations, enhance your online presence,
                 <span class="hidden md:inline"><br></span> and fuel your business growth effortlessly.
@@ -652,7 +654,7 @@
         .slideshow-slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            /* object-fit: cover; */
         }
 
         .slideshow-container .active {
@@ -704,18 +706,19 @@
                     <!-- Changed the ID to be unique: slideshow-gym -->
                     <div class="slideshow-container relative" id="slideshow-gym">
                         <div class="slideshow-slide active">
-                            <img alt="Screenshot of the Basic plan dashboard" height="150"
-                                src="https://storage.googleapis.com/a1aa/image/KBpUTMlqJJ4tLBCgwhSSn6tBcPOO8enzz4SpgLU1ip6Zij8JA.jpg"
+                            <img alt="Screenshot of the Basic plan dashboard" height="150" src="images/flexifit-p1.png"
                                 width="200" />
                         </div>
+
+
                         <div class="slideshow-slide">
-                            <img alt="Screenshot of the Basic plan analytics" height="150"
-                                src="https://storage.googleapis.com/a1aa/image/vVafkVTyGLQOHS7A45ESWuCS2EWZfX8kRETEZ4GYBuAyEH5TA.jpg"
+                            <img alt="Screenshot of the Basic plan settings" height="150" src="images/flexifit-p2.png"
                                 width="200" />
                         </div>
+
+
                         <div class="slideshow-slide">
-                            <img alt="Screenshot of the Basic plan settings" height="150"
-                                src="https://storage.googleapis.com/a1aa/image/8qDZWUGNh442BJH6LynfSWYVA75A0PyBRz58TNHKZvmaij8JA.jpg"
+                            <img alt="Screenshot of the Basic plan settings" height="150" src="images/flexifit-p3.png"
                                 width="200" />
                         </div>
                         <!-- Updated the onclick with the correct ID -->
@@ -891,10 +894,10 @@
                         </div>
                     </div>
                     <div class="flex flex-col md:flex-col gap-6justify-center items-center">
-                        <button class="mt-2 md:mt-6 bg-red-600 text-white py-2 px-4 rounded-lg"
+                        <!-- <button class="mt-2 md:mt-6 bg-red-600 text-white py-2 px-4 rounded-lg"
                             onclick="window.location.href='https://flexifit.innovasolutionsglobal.online/';">
                             Live Demo
-                        </button>
+                        </button> -->
                         <div class="text-sm font-semi text-gray-800 mt-4">
                             Starting From Just
                         </div>
@@ -1701,14 +1704,7 @@
                             <li class="mb-2"><a class="hover:text-gray-600 hover:underline" href="#">Affiliates</a></li>
                         </ul>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-gray-900 mb-4">Get started</h3>
-                        <ul>
-                            <li class="mb-2"><a class="hover:text-gray-600 hover:underline" href="#">Create Account</a>
-                            </li>
-                            <li class="mb-2"><a class="hover:text-gray-600 hover:underline" href="#">Sign In</a></li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
         </div>
