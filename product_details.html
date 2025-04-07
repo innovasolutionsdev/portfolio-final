@@ -131,8 +131,7 @@
             </span>
         </div>
         <div class="hidden md:flex items-center space-x-6">
-
-            <!-- <div class="relative group">
+            <div class="relative group">
                 <button class="text-black font-medium" onclick="toggleDropdown()">
                     Products
                     <i class="fas fa-chevron-down ml-2" id="dropdown-icon">
@@ -146,33 +145,27 @@
                         DineMate
                     </a>
                 </div>
-            </div> -->
-            <!-- <a class="text-black font-medium" href="#"
-                onclick="document.getElementById('pricingSection').scrollIntoView({ behavior: 'smooth' }); return false;">
-                Pricing
+            </div>
+            <a class="text-black font-medium" href="contact.html">
+                Contact
             </a>
-            <a class="text-black font-medium" href="#"
-                onclick="document.getElementById('domainsSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+            <a class="text-black font-medium" href="domains.html">
                 Our Domains
             </a>
-            <a class="text-black font-medium" href="#"
-                onclick="document.getElementById('faqSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+            <a class="text-black font-medium" href="faq.html">
                 FAQ
             </a>
-            <a class="text-black font-medium" href="#"
-                onclick="document.getElementById('servicesSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+            <a class="text-black font-medium" href="services.html">
                 Services
-            </a> -->
+            </a>
         </div>
-        <div class="hidden md:flex items-center space-x-6">
-
-
+        <div class="hidden md:flex items-center space-x-4">
             <!-- <a class="text-black font-medium" href="#">
-      Login
-     </a> -->
-            <a class="bg-gray-800 text-white font-medium py-2 px-4 rounded" href="#"
-                onclick="document.getElementById('contactUsSection').scrollIntoView({ behavior: 'smooth' });">
-                Request a demo
+          Login
+         </a> -->
+            <a class="bg-red-500 text-white font-medium py-1 px-4 rounded-full" href="https://flexifit.innovasolutionsglobal.online/"
+                >
+               Live Demo
             </a>
         </div>
         <div class="md:hidden">
@@ -183,7 +176,7 @@
         </div>
     </nav>
     <div class="hidden md:hidden" id="mobile-menu">
-        <!-- <div class="p-4">
+        <div class="p-4">
             <button class="block text-black font-medium py-2 w-full text-left"
                 onclick="document.getElementById('mobile-products').classList.toggle('hidden')">
                 Products
@@ -198,30 +191,24 @@
                     DineMate
                 </a>
             </div>
-            <a class="block text-black font-medium py-2" href="#"
-                onclick="document.getElementById('pricingSection').scrollIntoView({ behavior: 'smooth' }); return false;">
-                Pricing
+            <a class="block text-black font-medium py-2" href="contact.html">
+                Contact
             </a>
-            <a class="block text-black font-medium py-2" href="#"
-                onclick="document.getElementById('domainsSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+            <a class="block text-black font-medium py-2" href="domains.html">
                 Our Domains
             </a>
-            <a class="block text-black font-medium py-2" href="#"
-                onclick="document.getElementById('faqSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+            <a class="block text-black font-medium py-2" href="faq.html">
                 FAQ
             </a>
-            <a class="block text-black font-medium py-2" href="#"
-                onclick="document.getElementById('servicesSection').scrollIntoView({ behavior: 'smooth' }); return false;">
+            <a class="block text-black font-medium py-2" href="services.html">
                 Services
             </a>
-            <a class="block text-black font-medium py-2" href="#">
-                Login
+
+            <a class="block bg-red-500 text-white font-medium py-2 px-4 rounded mt-2" href="https://flexifit.innovasolutionsglobal.online/"
+                >
+                Free Live Demo
             </a>
-            <a class="block bg-gray-800 text-white font-medium py-2 px-4 rounded mt-2" href="#"
-                onclick="document.getElementById('contactUsSection').scrollIntoView({ behavior: 'smooth' });">
-                Request a demo
-            </a>
-        </div> -->
+        </div>
     </div>
 
     <script>
@@ -486,7 +473,7 @@
         <h2 class="main-heading   text-center font-bold   leading-[3.25rem]">
             Choose your plan
         </h2>
-        <p class="sub-heading  mt-4 text-center">
+        <p class="sub-heading  mt-4 mb-4 text-center">
             7 Days free trial. No credit card required.
         </p>
     </div>
@@ -511,32 +498,66 @@
     <div class="flex items-center justify-center min-h-screen">
         <div class="w-full px-4 md:px-0 ">
             <!-- Mobile: Horizontal Scroll Container (hidden on desktop) -->
-            <div class="md:hidden overflow-x-auto pb-4" style="display: block;" id="mobileprice">
+            <div class="md:hidden overflow-x-auto pb-4 mt-4" style="display: block;" id="mobileprice">
                 <div class="flex space-x-4 w-max px-4">
                     <!-- Standard Plan (Mobile) -->
                     <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-64 flex-shrink-0">
                         <h2 class="text-xl font-semibold mb-4">Standard</h2>
-                        <div class="text-3xl font-bold mb-6">Rs 12,500 <span
-                                class="text-lg font-normal text-gray-500">month</span></div>
+                        <div class="text-3xl font-bold mb-6">
+                            Rs 12,500 <span class="text-lg font-normal text-gray-500">month</span>
+                        </div>
                         <ul class="space-y-2 mb-6">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart
-                                Notification</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM
-                                System</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E
-                                Commerce</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting
-                                and Domain</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Mobile
-                                Application</li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notifications
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Advanced Analytics
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Commerce Store
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Membership Cards
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>User Dashboards
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>SSL Certification
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-400 mr-2"></i>Mobile Application
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-400 mr-2"></i>Content Management
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-400 mr-2"></i>Employee Dashboard
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-400 mr-2"></i>Website Content Creation
+                            </li>
                         </ul>
                         <button
                             class="w-full bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black transition duration-300"
-                            onclick="redirectToWhatsApp('Standard', 'Rs 12,500')">Purchase Plan</button>
+                            onclick="redirectToWhatsApp('Standard', 'Rs 12,500')">
+                            Purchase Plan
+                        </button>
                     </div>
 
                     <!-- Premium Plan (Mobile) -->
@@ -549,20 +570,51 @@
                                 class="text-sm font-normal text-gray-500 ml-2">month.</span></div>
                         <p class="text-sm mb-6 mt-2 text-gray-600">You get free Rs.4800 implementation!</p>
                         <ul class="space-y-2 mb-6">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart
-                                Notification</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting
-                                and Domain</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile
-                                Application</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content
-                                Management</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E
-                                Commerce</li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notifications
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Advanced Analytics
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Commerce Store
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Membership Cards
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>User Dashboards
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>SSL Certification
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Employee Dashboard
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Content Creation
+                            </li>
                         </ul>
                         <button
                             class="w-full bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black transition duration-300"
@@ -575,20 +627,51 @@
                         <div class="text-3xl font-bold mb-6">Rs 150,000 <span
                                 class="text-sm font-normal text-gray-500">year.<br>You save Rs.36,000!</span></div>
                         <ul class="space-y-2 mb-6">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart
-                                Notification</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting
-                                and Domain</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile
-                                Application</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content
-                                Management</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E
-                                Commerce</li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notifications
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Advanced Analytics
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Commerce Store
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Membership Cards
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>User Dashboards
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>SSL Certification
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Employee Dashboard
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Content Creation
+                            </li>
                         </ul>
                         <button
                             class="w-full bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black transition duration-300"
@@ -601,20 +684,51 @@
                         <div class="text-3xl font-bold">Rs 645,000 <span class="text-sm text-gray-500"></span></div>
                         <p class="text-sm mb-6 mt-2 text-gray-500">You save Rs.105,000!</p>
                         <ul class="space-y-2 mb-6">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart
-                                Notification</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting
-                                and Domain</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile
-                                Application</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content
-                                Management</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E
-                                Commerce</li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notifications
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Advanced Analytics
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Commerce Store
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Membership Cards
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>User Dashboards
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>SSL Certification
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Employee Dashboard
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Content Creation
+                            </li>
                         </ul>
                         <button
                             class="w-full bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-black transition duration-300"
@@ -624,7 +738,7 @@
             </div>
 
             <!-- Desktop: Regular Grid Layout (hidden on mobile) -->
-            <div class="md:flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8 px-4"
+            <div class="md:flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8 px-16"
                 id="desktopprice">
                 <!-- Standard Plan (Desktop) -->
                 <div class="bg-gray-100 rounded-2xl shadow-lg p-6 w-full md:w-1/4">
@@ -632,24 +746,51 @@
                     <div class="text-3xl font-bold mb-6">Rs 12,500 <span
                             class="text-lg font-normal text-gray-500">month</span></div>
                     <ul class="space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized
-                            Design</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive
-                            Design</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart
-                            Notification</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design
                         </li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design
                         </li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and
-                            Domain</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Mobile
-                            Application</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Content
-                            Management</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-400 mr-2"></i>Advanced
-                            Analytics</li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notifications
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Advanced Analytics
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Commerce Store
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Membership Cards
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>User Dashboards
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Maintenance
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>SSL Certification
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-400 mr-2"></i>Mobile Application
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-400 mr-2"></i>Content Management
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-400 mr-2"></i>Employee Dashboard
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-400 mr-2"></i>Website Content Creation
+                        </li>
                     </ul>
                     <div class="flex justify-center">
                         <button
@@ -667,19 +808,50 @@
                             class="text-sm font-normal text-gray-500 ml-2">month.</span></div>
                     <p class="text-sm mb-6 mt-2 text-gray-600">You get free Rs.4800 implementation!</p>
                     <ul class="space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized
-                            Design</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive
-                            Design</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart
-                            Notification</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and
-                            Domain</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile
-                            Application</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content
-                            Management</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notifications
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Advanced Analytics
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Commerce Store
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Membership Cards
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>User Dashboards
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Maintenance
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>SSL Certification
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Employee Dashboard
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Content Creation
                         </li>
                     </ul>
                     <div class="flex justify-center">
@@ -695,19 +867,50 @@
                     <div class="text-3xl font-bold mb-6">Rs 150,000 <span
                             class="text-sm font-normal text-gray-500">year.<br>You save Rs.36,000!</span></div>
                     <ul class="space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized
-                            Design</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive
-                            Design</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart
-                            Notification</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and
-                            Domain</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile
-                            Application</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content
-                            Management</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notifications
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Advanced Analytics
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Commerce Store
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Membership Cards
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>User Dashboards
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Maintenance
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>SSL Certification
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Employee Dashboard
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Content Creation
                         </li>
                     </ul>
                     <div class="flex justify-center">
@@ -723,19 +926,50 @@
                     <div class="text-3xl font-bold">Rs 645,000 <span class="text-sm text-gray-500"></span></div>
                     <p class="text-sm mb-6 mt-2 text-gray-500">You save Rs.105,000!</p>
                     <ul class="space-y-2 mb-6">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized
-                            Design</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive
-                            Design</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart
-                            Notification</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and
-                            Domain</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile
-                            Application</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>Content
-                            Management</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i>E Commerce
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Customized Design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Responsive Design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Smart Notifications
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Advanced Analytics
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>CRM System
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Commerce Store
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>E-Membership Cards
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>User Dashboards
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Maintenance
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Hosting and Domain
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>SSL Certification
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Mobile Application
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Content Management
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Employee Dashboard
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-gray-800 mr-2"></i>Website Content Creation
                         </li>
                     </ul>
                     <div class="flex justify-center">
@@ -1822,7 +2056,7 @@
                             <i class="fas fa-envelope text-2xl text-gray-700"></i>
                             <span class="ml-2">Chat With Our Team</span>
                         </div>
-                        <div class="text-xl font-bold mb-4">email@pagedone.com</div>
+                        <div class="text-xl font-bold mb-4">innovasolutions.dev@gmail.com</div>
                         <button class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded-full">Contact
                             Us</button>
                     </div>
@@ -1979,9 +2213,9 @@
                 <div class="flex items-center justify-center sm:justify-end space-x-2">
                     <img src="https://storage.googleapis.com/a1aa/image/JDaeePfYopO19Ibb8uBdg3UAxgW9g95BOlZ4DHR67Bf7MKkPB.jpg"
                         alt="Atlassian logo" class="h-5">
-                    <span class="text-gray-900 font-bold">SOLARA</span>
+                    <span class="text-gray-900 font-bold">INNOVASOLUTIONS</span>
                 </div>
-                <div class="text-gray-700 text-sm">© 2024, Loom, Inc. All Rights Reserved.</div>
+                <div class="text-gray-700 text-sm">© 2024, InnovaSolutions, Inc. All Rights Reserved.</div>
             </div>
         </div>
     </footer>
